@@ -237,7 +237,7 @@
         </div>
         <div class="contact-actions">
           <button class="btn btn-primary copy-email-btn" type="button" data-copy-email="bird.bioinfo@gmail.com" data-i18n="contactCopy">Email address</button>
-          <a class="btn btn-secondary" href="assets/BIRD_pamphlet.pdf" data-i18n="downloadPamphlet">Download pamphlet</a>
+          <a class="btn btn-secondary" href="assets/BIRD_pamphlet_english.pdf" data-i18n="downloadPamphlet" data-pamphlet-download data-pamphlet-en="assets/BIRD_pamphlet_english.pdf" data-pamphlet-fr="assets/BIRD_pamphlet_french.pdf">Download pamphlet</a>
           <p class="location">bird.bioinfo@gmail.com</p>
           <p class="location" data-i18n="location">Montréal, Québec · Services available in English and French</p>
           <p class="microcopy" data-copy-status hidden></p>
@@ -435,6 +435,16 @@
 
         document.querySelectorAll('[data-lang-switch]').forEach(function (button) {
           button.setAttribute('aria-pressed', button.getAttribute('data-lang-switch') === lang ? 'true' : 'false');
+        });
+
+        document.querySelectorAll('[data-pamphlet-download]').forEach(function (link) {
+          const href = lang === 'fr'
+            ? link.getAttribute('data-pamphlet-fr')
+            : link.getAttribute('data-pamphlet-en');
+
+          if (href) {
+            link.setAttribute('href', href);
+          }
         });
       };
 
