@@ -11,6 +11,38 @@
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/bird_logo.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Services section adjustments */
+    #services .services-eyebrow-large {
+      font-size: 1.05rem;
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      margin-bottom: 0.55rem;
+    }
+
+    /* With 5 service cards: 3 cards on row 1, 2 centered cards on row 2 */
+    @media (min-width: 900px) {
+      #services .cards-grid.services-grid-five {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 1.5rem;
+        align-items: stretch;
+      }
+
+      #services .cards-grid.services-grid-five > .service-card {
+        grid-column: span 2;
+      }
+
+      #services .cards-grid.services-grid-five > .service-card:nth-child(4) {
+        grid-column: 2 / span 2;
+      }
+
+      #services .cards-grid.services-grid-five > .service-card:nth-child(5) {
+        grid-column: 4 / span 2;
+      }
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -72,12 +104,12 @@
     <section id="services" class="section section-soft">
       <div class="container">
         <div class="section-heading centered">
-          <p class="eyebrow">Services</p>
+          <p class="eyebrow services-eyebrow-large">Services</p>
           <h2>How BIRD can support your team</h2>
           <p>A concise service menu for laboratories, research teams, students, and life sciences organizations.</p>
         </div>
 
-        <div class="cards-grid">
+        <div class="cards-grid services-grid-five">
           <article class="service-card">
             <h3>Study Design & Bioinformatics Consultation</h3>
             <p>Planning support before data generation or analysis.</p>
