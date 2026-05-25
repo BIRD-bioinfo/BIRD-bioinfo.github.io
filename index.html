@@ -12,15 +12,6 @@
   <link rel="icon" href="assets/bird_logo.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Services section adjustments */
-    #services .services-eyebrow-large {
-      font-size: 1.05rem;
-      line-height: 1.2;
-      font-weight: 800;
-      letter-spacing: 0.18em;
-      margin-bottom: 0.55rem;
-    }
-
     /* With 5 service cards: 3 cards on row 1, 2 centered cards on row 2 */
     @media (min-width: 900px) {
       #services .cards-grid.services-grid-five {
@@ -42,7 +33,6 @@
         grid-column: 4 / span 2;
       }
     }
-
 
     /* Larger section labels for Services, Training, and Formats */
     .section-label-large {
@@ -68,10 +58,41 @@
         align-items: stretch;
       }
     }
+
+    .language-switcher {
+      display: inline-flex;
+      gap: 0.35rem;
+      align-items: center;
+      margin-left: 0.75rem;
+    }
+
+    .language-switcher button {
+      border: 1px solid rgba(11, 37, 69, 0.25);
+      background: #ffffff;
+      color: #0B2545;
+      border-radius: 999px;
+      padding: 0.35rem 0.6rem;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .language-switcher button[aria-pressed="true"] {
+      background: #035F2E;
+      border-color: #035F2E;
+      color: #ffffff;
+    }
+
+    @media (max-width: 720px) {
+      .language-switcher {
+        margin-left: 0;
+        margin-top: 0.75rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
   <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
@@ -79,16 +100,20 @@
         <img src="assets/bird_logo.png" alt="BIRD logo" class="brand-logo">
         <span class="brand-text">
           <strong>BIRD</strong>
-          <span>Bioinformatics, Research & Data</span>
+          <span data-i18n="brandSubtitle">Bioinformatics, Research & Data</span>
         </span>
       </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" data-i18n="menuButton">Menu</button>
       <ul id="nav-menu" class="nav-menu">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#training">Training</a></li>
-        <li><a href="#formats">Formats</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#services" data-i18n="navServices">Services</a></li>
+        <li><a href="#training" data-i18n="navTraining">Training</a></li>
+        <li><a href="#formats" data-i18n="navFormats">Formats</a></li>
+        <li><a href="#contact" data-i18n="navContact">Contact</a></li>
       </ul>
+      <div class="language-switcher" aria-label="Language selection">
+        <button type="button" data-lang-switch="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang-switch="fr" aria-pressed="false">FR</button>
+      </div>
     </nav>
   </header>
 
@@ -96,98 +121,69 @@
     <section id="top" class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Bioinformatics, Research & Data · Bioinformatique, Recherche & Données</p>
-          <h1>Bioinformatics support for your research project</h1>
-          <p class="hero-lead">Practical bioinformatics, data analysis, training, and reproducible research workflow support for laboratories and life sciences teams.</p>
+          <p class="eyebrow" data-i18n="heroEyebrow">Bioinformatics, Research & Data · Bioinformatique, Recherche & Données</p>
+          <h1 data-i18n="heroTitle">Bioinformatics support for your research project</h1>
+          <p class="hero-lead" data-i18n="heroLead">Practical bioinformatics, data analysis, training, and reproducible research workflow support for laboratories and life sciences teams.</p>
           <div class="hero-actions" aria-label="Primary actions">
-            <button class="btn btn-primary copy-email-btn" type="button" data-copy-email="bird.bioinfo@gmail.com">Email us for a free consultation session</button>
-            <a class="btn btn-secondary" href="#services">Explore services</a>
+            <button class="btn btn-primary copy-email-btn" type="button" data-copy-email="bird.bioinfo@gmail.com" data-i18n="heroCopyEmail">Email us for a free consultation session</button>
+            <a class="btn btn-secondary" href="#services" data-i18n="heroExplore">Explore services</a>
           </div>
           <p class="microcopy" data-copy-status hidden></p>
-          <p class="microcopy">Free 30-minute initial consultation available for new projects.</p>
+          <p class="microcopy" data-i18n="heroMicrocopy">Free 30-minute initial consultation available for new projects.</p>
         </div>
         <div class="hero-card" aria-label="BIRD service summary">
           <img src="assets/bird_logo.png" alt="" class="hero-logo">
-          <h2>From study design to reproducible analysis</h2>
-          <p>Workflow development, training, troubleshooting, documentation, and scientific mentorship.</p>
+          <h2 data-i18n="heroCardTitle">From study design to reproducible analysis</h2>
+          <p data-i18n="heroCardText">Workflow development, training, troubleshooting, documentation, and scientific mentorship.</p>
         </div>
       </div>
     </section>
 
     <section class="notice container" aria-label="Free consultation notice">
-      <strong>Free 30-minute initial consultation available for new projects.</strong>
-      <span>Use this meeting to discuss your project goals, data type, timeline, current challenges, and possible next steps. Detailed study design, data analysis, troubleshooting, code review, and technical support are available as separate services.</span>
+      <strong data-i18n="noticeStrong">Free 30-minute initial consultation available for new projects.</strong>
+      <span data-i18n="noticeText">Use this meeting to discuss your project goals, data type, timeline, current challenges, and possible next steps. Detailed study design, data analysis, troubleshooting, code review, and technical support are available as separate services.</span>
     </section>
 
     <section id="about" class="section container">
       <div class="section-heading">
-        <p class="eyebrow">About BIRD</p>
-        <h2>Practical support for research teams</h2>
+        <p class="eyebrow" data-i18n="aboutLabel">About BIRD</p>
+        <h2 data-i18n="aboutTitle">Practical support for research teams</h2>
       </div>
-      <p class="wide-text">BIRD is a Montréal-based bioinformatics consulting service supporting academic laboratories, research teams, students, biotech startups, and life sciences organizations. We help researchers make complex biological data analysis clearer, reproducible, well documented, and easier to transfer to students, trainees, and collaborators.</p>
+      <p class="wide-text" data-i18n="aboutText">BIRD is a Montréal-based bioinformatics consulting service supporting academic laboratories, research teams, students, biotech startups, and life sciences organizations. We help researchers make complex biological data analysis clearer, reproducible, well documented, and easier to transfer to students, trainees, and collaborators.</p>
     </section>
 
     <section id="services" class="section section-soft">
       <div class="container">
         <div class="section-heading centered">
-          <p class="eyebrow section-label-large">Services</p>
-          <h2>How BIRD can support your team?</h2>
-          <p>A concise service menu for laboratories, research teams, students, and life sciences organizations.</p>
+          <p class="eyebrow section-label-large" data-i18n="servicesLabel">Services</p>
+          <h2 data-i18n="servicesTitle">How BIRD can support your team?</h2>
+          <p data-i18n="servicesIntro">A concise service menu for laboratories, research teams, students, and life sciences organizations.</p>
         </div>
 
         <div class="cards-grid services-grid-five">
           <article class="service-card">
-            <h3>Study Design & Bioinformatics Consultation</h3>
-            <p>Bioinformatics study planning, including sample and metadata structure, replicates,
-comparison planning and downstream analysis strategy.</p>
-
+            <h3 data-i18n="s1Title">Study Design & Bioinformatics Consultation</h3>
+            <p data-i18n="s1Text">Bioinformatics study planning, including sample and metadata structure, replicates, comparison planning and downstream analysis strategy.</p>
           </article>
 
           <article class="service-card">
-            <h3>Omics & NGS Data Analysis</h3>
-            <p>Quality control, exploratory analysis, RNA-seq and differential expression, functional
-analysis, single-cell analysis, metagenomics, metabarcoding, ATAC-seq, methylation
-analysis, resistome analysis, PhIP-seq, small RNA-seq and preparation of figures, tables
-and reports.</p>
+            <h3 data-i18n="s2Title">Omics & NGS Data Analysis</h3>
+            <p data-i18n="s2Text">Quality control, exploratory analysis, RNA-seq and differential expression, functional analysis, single-cell analysis, metagenomics, metabarcoding, ATAC-seq, methylation analysis, resistome analysis, PhIP-seq, small RNA-seq and preparation of figures, tables and reports.</p>
           </article>
 
           <article class="service-card">
-            <h3>Pipelines, Automation & Troubleshooting</h3>
-            <p>Python, R, and Bash workflows, HPC, SLURM/Torque support and data organization.</p>
-            <!-- <ul>
-              <li>Python, R, and Bash workflows</li>
-              <li>Automation and metadata validation</li>
-              <li>FASTQ organization and data-transfer workflows</li>
-              <li>HPC and SLURM/Torque support</li>
-              <li>README files, SOPs, and workflow handover documentation</li>
-            </ul> -->
+            <h3 data-i18n="s3Title">Pipelines, Automation & Troubleshooting</h3>
+            <p data-i18n="s3Text">Python, R, and Bash workflows, HPC, SLURM/Torque support and data organization.</p>
           </article>
 
           <article class="service-card">
-            <h3>Training for Biologists & Research Teams</h3>
-            <p>Python, R, and Bash for biologists, basic bioinformatics, sequencing basics, biological
-databases: SRA, GEO, UCSC, etc., biological data file formats, research data
-organization, HPC and Alliance cluster basics and practical project-based training.</p>
-            <!-- <ul>
-              <li>Python, R, and Bash for biologists</li>
-              <li>Basic bioinformatics and sequencing basics</li>
-              <li>Public databases, including NCBI, SRA, GEO, GO, and BLAST</li>
-              <li>Biological data file formats</li>
-              <li>Research data organization and reproducible workflows</li>
-            </ul> -->
+            <h3 data-i18n="s4Title">Training for Biologists & Research Teams</h3>
+            <p data-i18n="s4Text">Python, R, and Bash for biologists, basic bioinformatics, sequencing basics, biological databases: SRA, GEO, UCSC, etc., biological data file formats, research data organization, HPC and Alliance cluster basics and practical project-based training.</p>
           </article>
 
           <article class="service-card">
-            <h3>Mentorship & Scientific Guidance</h3>
-            <p>Scientific and technical guidance for students, trainees and research teams, including
-project planning, code review, data interpretation and workflow documentation.</p>
-            <!-- <ul>
-              <li>Student and trainee project support</li>
-              <li>Project planning and code review</li>
-              <li>Data interpretation support</li>
-              <li>Methods and workflow documentation</li>
-              <li>Scientific and technical communication support</li>
-            </ul> -->
+            <h3 data-i18n="s5Title">Mentorship & Scientific Guidance</h3>
+            <p data-i18n="s5Text">Scientific and technical guidance for students, trainees and research teams, including project planning, code review, data interpretation and workflow documentation.</p>
           </article>
         </div>
       </div>
@@ -196,21 +192,21 @@ project planning, code review, data interpretation and workflow documentation.</
     <section id="training" class="section container">
       <div class="split">
         <div>
-          <p class="eyebrow section-label-large">Training</p>
-          <h2>Capacity building for biologists and research teams</h2>
-          <p>Training can be offered as one-on-one sessions, group workshops, or project-based mentoring using examples that match your team’s data and goals.</p>
+          <p class="eyebrow section-label-large" data-i18n="trainingLabel">Training</p>
+          <h2 data-i18n="trainingTitle">Capacity building for biologists and research teams</h2>
+          <p data-i18n="trainingText">Training can be offered as one-on-one sessions, group workshops, or project-based mentoring using examples that match your team’s data and goals.</p>
         </div>
         <ul class="topic-list" aria-label="Training topics">
-          <li>Python, R, and Bash for biologists</li>
-          <li>Basic bioinformatics concepts</li>
-          <li>Sequencing technologies and NGS basics</li>
-          <li>FASTA, FASTQ, BAM, VCF, and GTF/GFF files</li>
-          <li>NCBI, SRA, GEO, GO, BLAST, and public databases</li>
-          <li>Linux and Bash for researchers</li>
-          <li>HPC and Alliance cluster basics</li>
-          <li>Research data organization and reproducibility</li>
-          <li>Workflow documentation and handover</li>
-          <li>Practical project-based training</li>
+          <li data-i18n="t1">Python, R, and Bash for biologists</li>
+          <li data-i18n="t2">Basic bioinformatics concepts</li>
+          <li data-i18n="t3">Sequencing technologies and NGS basics</li>
+          <li data-i18n="t4">FASTA, FASTQ, BAM, VCF, and GTF/GFF files</li>
+          <li data-i18n="t5">NCBI, SRA, GEO, GO, BLAST, and public databases</li>
+          <li data-i18n="t6">Linux and Bash for researchers</li>
+          <li data-i18n="t7">HPC and Alliance cluster basics</li>
+          <li data-i18n="t8">Research data organization and reproducibility</li>
+          <li data-i18n="t9">Workflow documentation and handover</li>
+          <li data-i18n="t10">Practical project-based training</li>
         </ul>
       </div>
     </section>
@@ -218,20 +214,16 @@ project planning, code review, data interpretation and workflow documentation.</
     <section id="formats" class="section section-dark">
       <div class="container">
         <div class="section-heading centered">
-          <p class="eyebrow section-label-large">Formats</p>
-          <h2>Flexible ways to work together</h2>
+          <p class="eyebrow section-label-large" data-i18n="formatsLabel">Formats</p>
+          <h2 data-i18n="formatsTitle">Flexible ways to work together</h2>
         </div>
         <div class="format-grid">
-          <div><strong>Free initial consultation</strong><span>30-minute orientation meeting to discuss project goals, data type, timeline, current
-challenges and possible next steps.</span></div>
-          <div><strong>Hourly support</strong><span>Useful for troubleshooting, technical questions, code review, short-term support and
-focused technical guidance.</span></div>
-          <div><strong>Fixed-price packages</strong><span>Useful for defined analysis projects, workflow audits, study design consultations,
-documentation or training sessions.</span></div>
-          <div><strong>Customized workshops</strong><span>Practical training adapted to a lab, team, course, research group or specific dataset.</span></div>
-          <div><strong>One-on-one training</strong><span>Personalized training adapted to a learner’s project and skill level.</span></div>
-          <div><strong>Monthly lab support</strong><span>Ongoing support for labs that need regular bioinformatics help without hiring a
-full-time bioinformatician.</span></div>
+          <div><strong data-i18n="f1Title">Free initial consultation</strong><span data-i18n="f1Text">30-minute orientation meeting to discuss project goals, data type, timeline, current challenges and possible next steps.</span></div>
+          <div><strong data-i18n="f2Title">Hourly support</strong><span data-i18n="f2Text">Useful for troubleshooting, technical questions, code review, short-term support and focused technical guidance.</span></div>
+          <div><strong data-i18n="f3Title">Fixed-price packages</strong><span data-i18n="f3Text">Useful for defined analysis projects, workflow audits, study design consultations, documentation or training sessions.</span></div>
+          <div><strong data-i18n="f4Title">Customized workshops</strong><span data-i18n="f4Text">Practical training adapted to a lab, team, course, research group or specific dataset.</span></div>
+          <div><strong data-i18n="f5Title">One-on-one training</strong><span data-i18n="f5Text">Personalized training adapted to a learner’s project and skill level.</span></div>
+          <div><strong data-i18n="f6Title">Monthly lab support</strong><span data-i18n="f6Text">Ongoing support for labs that need regular bioinformatics help without hiring a full-time bioinformatician.</span></div>
         </div>
       </div>
     </section>
@@ -239,15 +231,15 @@ full-time bioinformatician.</span></div>
     <section id="contact" class="section container contact-section">
       <div class="contact-card">
         <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Let’s discuss your project or training needs</h2>
-          <p>Services are provided independently through BIRD and can be adapted to each laboratory’s needs, budget, and timeline. Institutional logos, confidential information, and unpublished project details are not used without prior authorization.</p>
+          <p class="eyebrow" data-i18n="contactLabel">Contact</p>
+          <h2 data-i18n="contactTitle">Let’s discuss your project or training needs</h2>
+          <p data-i18n="contactText">Services are provided independently through BIRD and can be adapted to each laboratory’s needs, budget, and timeline. Institutional logos, confidential information, and unpublished project details are not used without prior authorization.</p>
         </div>
         <div class="contact-actions">
-          <button class="btn btn-primary copy-email-btn" type="button" data-copy-email="bird.bioinfo@gmail.com">Email address</button>
-          <a class="btn btn-secondary" href="assets/BIRD_pamphlet.pdf">Download pamphlet</a>
+          <button class="btn btn-primary copy-email-btn" type="button" data-copy-email="bird.bioinfo@gmail.com" data-i18n="contactCopy">Email address</button>
+          <a class="btn btn-secondary" href="assets/BIRD_pamphlet.pdf" data-i18n="downloadPamphlet">Download pamphlet</a>
           <p class="location">bird.bioinfo@gmail.com</p>
-          <p class="location">Montréal, Québec · Services available in English and French</p>
+          <p class="location" data-i18n="location">Montréal, Québec · Services available in English and French</p>
           <p class="microcopy" data-copy-status hidden></p>
         </div>
       </div>
@@ -257,12 +249,159 @@ full-time bioinformatician.</span></div>
   <footer class="site-footer">
     <div class="container footer-grid">
       <p><strong>BIRD</strong> — Bioinformatics, Research & Data / Bioinformatique, Recherche & Données</p>
-      <p>© <span id="year"></span> BIRD. All rights reserved.</p>
+      <p>© <span id="year"></span> BIRD. <span data-i18n="footerRights">All rights reserved.</span></p>
     </div>
   </footer>
 
   <script>
     (function () {
+      const translations = {
+        en: {
+          skip: 'Skip to content',
+          brandSubtitle: 'Bioinformatics, Research & Data',
+          menuButton: 'Menu',
+          navServices: 'Services',
+          navTraining: 'Training',
+          navFormats: 'Formats',
+          navContact: 'Contact',
+          heroEyebrow: 'Bioinformatics, Research & Data · Bioinformatique, Recherche & Données',
+          heroTitle: 'Bioinformatics support for your research project',
+          heroLead: 'Practical bioinformatics, data analysis, training, and reproducible research workflow support for laboratories and life sciences teams.',
+          heroCopyEmail: 'Email us for a free consultation session',
+          heroExplore: 'Explore services',
+          heroMicrocopy: 'Free 30-minute initial consultation available for new projects.',
+          heroCardTitle: 'From study design to reproducible analysis',
+          heroCardText: 'Workflow development, training, troubleshooting, documentation, and scientific mentorship.',
+          noticeStrong: 'Free 30-minute initial consultation available for new projects.',
+          noticeText: 'Use this meeting to discuss your project goals, data type, timeline, current challenges, and possible next steps. Detailed study design, data analysis, troubleshooting, code review, and technical support are available as separate services.',
+          aboutLabel: 'About BIRD',
+          aboutTitle: 'Practical support for research teams',
+          aboutText: 'BIRD is a Montréal-based bioinformatics consulting service supporting academic laboratories, research teams, students, biotech startups, and life sciences organizations. We help researchers make complex biological data analysis clearer, reproducible, well documented, and easier to transfer to students, trainees, and collaborators.',
+          servicesLabel: 'Services',
+          servicesTitle: 'How BIRD can support your team?',
+          servicesIntro: 'A concise service menu for laboratories, research teams, students, and life sciences organizations.',
+          s1Title: 'Study Design & Bioinformatics Consultation',
+          s1Text: 'Bioinformatics study planning, including sample and metadata structure, replicates, comparison planning and downstream analysis strategy.',
+          s2Title: 'Omics & NGS Data Analysis',
+          s2Text: 'Quality control, exploratory analysis, RNA-seq and differential expression, functional analysis, single-cell analysis, metagenomics, metabarcoding, ATAC-seq, methylation analysis, resistome analysis, PhIP-seq, small RNA-seq and preparation of figures, tables and reports.',
+          s3Title: 'Pipelines, Automation & Troubleshooting',
+          s3Text: 'Python, R, and Bash workflows, HPC, SLURM/Torque support and data organization.',
+          s4Title: 'Training for Biologists & Research Teams',
+          s4Text: 'Python, R, and Bash for biologists, basic bioinformatics, sequencing basics, biological databases: SRA, GEO, UCSC, etc., biological data file formats, research data organization, HPC and Alliance cluster basics and practical project-based training.',
+          s5Title: 'Mentorship & Scientific Guidance',
+          s5Text: 'Scientific and technical guidance for students, trainees and research teams, including project planning, code review, data interpretation and workflow documentation.',
+          trainingLabel: 'Training',
+          trainingTitle: 'Capacity building for biologists and research teams',
+          trainingText: 'Training can be offered as one-on-one sessions, group workshops, or project-based mentoring using examples that match your team’s data and goals.',
+          t1: 'Python, R, and Bash for biologists',
+          t2: 'Basic bioinformatics concepts',
+          t3: 'Sequencing technologies and NGS basics',
+          t4: 'FASTA, FASTQ, BAM, VCF, and GTF/GFF files',
+          t5: 'NCBI, SRA, GEO, GO, BLAST, and public databases',
+          t6: 'Linux and Bash for researchers',
+          t7: 'HPC and Alliance cluster basics',
+          t8: 'Research data organization and reproducibility',
+          t9: 'Workflow documentation and handover',
+          t10: 'Practical project-based training',
+          formatsLabel: 'Formats',
+          formatsTitle: 'Flexible ways to work together',
+          f1Title: 'Free initial consultation',
+          f1Text: '30-minute orientation meeting to discuss project goals, data type, timeline, current challenges and possible next steps.',
+          f2Title: 'Hourly support',
+          f2Text: 'Useful for troubleshooting, technical questions, code review, short-term support and focused technical guidance.',
+          f3Title: 'Fixed-price packages',
+          f3Text: 'Useful for defined analysis projects, workflow audits, study design consultations, documentation or training sessions.',
+          f4Title: 'Customized workshops',
+          f4Text: 'Practical training adapted to a lab, team, course, research group or specific dataset.',
+          f5Title: 'One-on-one training',
+          f5Text: 'Personalized training adapted to a learner’s project and skill level.',
+          f6Title: 'Monthly lab support',
+          f6Text: 'Ongoing support for labs that need regular bioinformatics help without hiring a full-time bioinformatician.',
+          contactLabel: 'Contact',
+          contactTitle: 'Let’s discuss your project or training needs',
+          contactText: 'Services are provided independently through BIRD and can be adapted to each laboratory’s needs, budget, and timeline. Institutional logos, confidential information, and unpublished project details are not used without prior authorization.',
+          contactCopy: 'Email address',
+          downloadPamphlet: 'Download pamphlet',
+          location: 'Montréal, Québec · Services available in English and French',
+          footerRights: 'All rights reserved.',
+          copied: 'Email copied:',
+          emailFallback: 'Email:'
+        },
+        fr: {
+          skip: 'Aller au contenu',
+          brandSubtitle: 'Bioinformatique, Recherche & Données',
+          menuButton: 'Menu',
+          navServices: 'Services',
+          navTraining: 'Formation',
+          navFormats: 'Formats',
+          navContact: 'Contact',
+          heroEyebrow: 'Bioinformatics, Research & Data · Bioinformatique, Recherche & Données',
+          heroTitle: 'Soutien bioinformatique pour votre projet de recherche',
+          heroLead: 'Soutien pratique en bioinformatique, analyse de données, formation et flux de travail reproductibles pour les laboratoires et les équipes en sciences de la vie.',
+          heroCopyEmail: 'Écrivez-nous pour une consultation gratuite',
+          heroExplore: 'Explorer les services',
+          heroMicrocopy: 'Consultation initiale gratuite de 30 minutes offerte pour les nouveaux projets.',
+          heroCardTitle: 'De la conception d’étude à l’analyse reproductible',
+          heroCardText: 'Développement de flux de travail, formation, dépannage, documentation et mentorat scientifique.',
+          noticeStrong: 'Consultation initiale gratuite de 30 minutes offerte pour les nouveaux projets.',
+          noticeText: 'Cette rencontre permet de discuter des objectifs du projet, du type de données, de l’échéancier, des défis actuels et des prochaines étapes possibles. La conception détaillée d’étude, l’analyse de données, le dépannage, la révision de code et le soutien technique sont offerts comme services distincts.',
+          aboutLabel: 'À propos de BIRD',
+          aboutTitle: 'Soutien pratique pour les équipes de recherche',
+          aboutText: 'BIRD est un service montréalais de consultation en bioinformatique qui accompagne les laboratoires universitaires, les équipes de recherche, les étudiants, les entreprises en biotechnologie et les organisations en sciences de la vie. Nous aidons les chercheurs à rendre l’analyse de données biologiques complexes plus claire, reproductible, bien documentée et plus facilement transférable aux étudiants, stagiaires et collaborateurs.',
+          servicesLabel: 'Services',
+          servicesTitle: 'Comment BIRD peut soutenir votre équipe ?',
+          servicesIntro: 'Un menu de services concis pour les laboratoires, les équipes de recherche, les étudiants et les organisations en sciences de la vie.',
+          s1Title: 'Conception d’étude et consultation en bioinformatique',
+          s1Text: 'Planification bioinformatique, incluant la structure des échantillons et des métadonnées, les réplicats, la planification des comparaisons et la stratégie d’analyse en aval.',
+          s2Title: 'Analyse omique et NGS',
+          s2Text: 'Contrôle qualité, analyse exploratoire, RNA-seq et expression différentielle, analyse fonctionnelle, analyse unicellulaire, métagénomique, métabarcoding, ATAC-seq, analyse de méthylation, analyse du résistome, PhIP-seq, small RNA-seq et préparation de figures, tableaux et rapports.',
+          s3Title: 'Pipelines, automatisation et dépannage',
+          s3Text: 'Flux de travail en Python, R et Bash, soutien HPC, SLURM/Torque et organisation des données.',
+          s4Title: 'Formation pour biologistes et équipes de recherche',
+          s4Text: 'Python, R et Bash pour biologistes, bases de la bioinformatique, bases du séquençage, bases de données biologiques : SRA, GEO, UCSC, etc., formats de fichiers biologiques, organisation des données de recherche, bases du HPC et des grappes de calcul de l’Alliance, et formation pratique basée sur des projets.',
+          s5Title: 'Mentorat et accompagnement scientifique',
+          s5Text: 'Accompagnement scientifique et technique pour les étudiants, stagiaires et équipes de recherche, incluant la planification de projet, la révision de code, l’interprétation des données et la documentation des flux de travail.',
+          trainingLabel: 'Formation',
+          trainingTitle: 'Renforcement des capacités pour les biologistes et les équipes de recherche',
+          trainingText: 'La formation peut être offerte sous forme de séances individuelles, d’ateliers de groupe ou de mentorat basé sur un projet, avec des exemples adaptés aux données et aux objectifs de votre équipe.',
+          t1: 'Python, R et Bash pour biologistes',
+          t2: 'Concepts de base en bioinformatique',
+          t3: 'Technologies de séquençage et bases du NGS',
+          t4: 'Fichiers FASTA, FASTQ, BAM, VCF et GTF/GFF',
+          t5: 'NCBI, SRA, GEO, GO, BLAST et bases de données publiques',
+          t6: 'Linux et Bash pour chercheurs',
+          t7: 'Bases du HPC et des grappes de calcul de l’Alliance',
+          t8: 'Organisation des données de recherche et reproductibilité',
+          t9: 'Documentation et transfert des flux de travail',
+          t10: 'Formation pratique basée sur des projets',
+          formatsLabel: 'Formats',
+          formatsTitle: 'Des façons flexibles de collaborer',
+          f1Title: 'Consultation initiale gratuite',
+          f1Text: 'Rencontre d’orientation de 30 minutes pour discuter des objectifs du projet, du type de données, de l’échéancier, des défis actuels et des prochaines étapes possibles.',
+          f2Title: 'Soutien horaire',
+          f2Text: 'Utile pour le dépannage, les questions techniques, la révision de code, le soutien à court terme et l’accompagnement technique ciblé.',
+          f3Title: 'Forfaits à prix fixe',
+          f3Text: 'Utile pour les projets d’analyse définis, les audits de flux de travail, les consultations en conception d’étude, la documentation ou les séances de formation.',
+          f4Title: 'Ateliers personnalisés',
+          f4Text: 'Formation pratique adaptée à un laboratoire, une équipe, un cours, un groupe de recherche ou un jeu de données précis.',
+          f5Title: 'Formation individuelle',
+          f5Text: 'Formation personnalisée adaptée au projet et au niveau de compétence de la personne apprenante.',
+          f6Title: 'Soutien mensuel aux laboratoires',
+          f6Text: 'Soutien régulier en bioinformatique pour les laboratoires qui ont besoin d’aide sans embaucher un bioinformaticien à temps plein.',
+          contactLabel: 'Contact',
+          contactTitle: 'Discutons de votre projet ou de vos besoins de formation',
+          contactText: 'Les services sont fournis de façon indépendante par BIRD et peuvent être adaptés aux besoins, au budget et à l’échéancier de chaque laboratoire. Les logos institutionnels, les renseignements confidentiels et les détails de projets non publiés ne sont pas utilisés sans autorisation préalable.',
+          contactCopy: 'Adresse courriel',
+          downloadPamphlet: 'Télécharger le dépliant',
+          location: 'Montréal, Québec · Services disponibles en français et en anglais',
+          footerRights: 'Tous droits réservés.',
+          copied: 'Courriel copié :',
+          emailFallback: 'Courriel :'
+        }
+      };
+
+      let currentLang = localStorage.getItem('birdLanguage') || 'en';
+
       const fallbackCopy = function (text) {
         const textarea = document.createElement('textarea');
         textarea.value = text;
@@ -281,14 +420,44 @@ full-time bioinformatician.</span></div>
         }
       };
 
-      const showCopyStatus = function (message) {
+      const translatePage = function (lang) {
+        currentLang = lang;
+        localStorage.setItem('birdLanguage', lang);
+        document.documentElement.lang = lang;
+
+        document.querySelectorAll('[data-i18n]').forEach(function (element) {
+          const key = element.getAttribute('data-i18n');
+          const value = translations[lang] && translations[lang][key];
+          if (value) {
+            element.textContent = value;
+          }
+        });
+
+        document.querySelectorAll('[data-lang-switch]').forEach(function (button) {
+          button.setAttribute('aria-pressed', button.getAttribute('data-lang-switch') === lang ? 'true' : 'false');
+        });
+      };
+
+      const showCopyStatus = function (copied, email) {
+        const prefix = copied
+          ? (translations[currentLang].copied || 'Email copied:')
+          : (translations[currentLang].emailFallback || 'Email:');
+
         document.querySelectorAll('[data-copy-status]').forEach(function (status) {
-          status.textContent = message;
+          status.textContent = `${prefix} ${email}`;
           status.removeAttribute('hidden');
         });
       };
 
       document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('[data-lang-switch]').forEach(function (button) {
+          button.addEventListener('click', function () {
+            translatePage(button.getAttribute('data-lang-switch'));
+          });
+        });
+
+        translatePage(currentLang);
+
         document.querySelectorAll('[data-copy-email]').forEach(function (button) {
           button.addEventListener('click', async function () {
             const email = button.getAttribute('data-copy-email') || 'bird.bioinfo@gmail.com';
@@ -307,9 +476,14 @@ full-time bioinformatician.</span></div>
               copied = fallbackCopy(email);
             }
 
-            showCopyStatus(copied ? `Email copied: ${email}` : `Email: ${email}`);
+            showCopyStatus(copied, email);
           });
         });
+
+        const year = document.getElementById('year');
+        if (year) {
+          year.textContent = new Date().getFullYear();
+        }
       });
     })();
   </script>
