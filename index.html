@@ -42,6 +42,32 @@
         grid-column: 4 / span 2;
       }
     }
+
+
+    /* Larger section labels for Services, Training, and Formats */
+    .section-label-large {
+      color: #035F2E;
+      font-size: 1.4rem;
+      line-height: 1.15;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.65rem;
+    }
+
+    .section-dark .section-label-large {
+      color: #7ACC8F;
+    }
+
+    /* Formats: 6 boxes arranged as 2 rows x 3 columns on desktop */
+    @media (min-width: 900px) {
+      #formats .format-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+        align-items: stretch;
+      }
+    }
   </style>
 </head>
 <body>
@@ -104,7 +130,7 @@
     <section id="services" class="section section-soft">
       <div class="container">
         <div class="section-heading centered">
-          <p class="eyebrow services-label">Services</p>
+          <p class="eyebrow section-label-large">Services</p>
           <h2>How BIRD can support your team?</h2>
           <p>A concise service menu for laboratories, research teams, students, and life sciences organizations.</p>
         </div>
@@ -176,7 +202,7 @@
     <section id="training" class="section container">
       <div class="split">
         <div>
-          <p class="eyebrow">Training</p>
+          <p class="eyebrow section-label-large">Training</p>
           <h2>Capacity building for biologists and research teams</h2>
           <p>Training can be offered as one-on-one sessions, group workshops, or project-based mentoring using examples that match your team’s data and goals.</p>
         </div>
@@ -198,7 +224,7 @@
     <section id="formats" class="section section-dark">
       <div class="container">
         <div class="section-heading centered">
-          <p class="eyebrow">Formats</p>
+          <p class="eyebrow section-label-large">Formats</p>
           <h2>Flexible ways to work together</h2>
         </div>
         <div class="format-grid">
