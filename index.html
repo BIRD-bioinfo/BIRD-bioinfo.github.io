@@ -4,34 +4,79 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BIRD — Bioinformatics, Research & Data</title>
-  <meta name="description" content="BIRD provides bioinformatics consultation, omics and NGS data analysis, pipeline development, automation, troubleshooting, training, mentorship, and reproducible workflow support for research teams.">
+  <meta name="description" content="BIRD provides senior bioinformatics consultation, omics and NGS data analysis, research data management, pipeline development, automation, troubleshooting, training, mentorship, and reproducible workflow support for research teams.">
   <meta name="theme-color" content="#0B2545">
   <meta property="og:title" content="BIRD — Bioinformatics, Research & Data">
-  <meta property="og:description" content="Bioinformatics support, omics and NGS analysis, training, mentorship, and reproducible research workflows.">
+  <meta property="og:description" content="Bioinformatics support, omics and NGS analysis, research data management, training, mentorship, and reproducible research workflows.">
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/bird_logo.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* With 5 service cards: 3 cards on row 1, 2 centered cards on row 2 */
+    /* With 6 service cards: 3 cards per row on desktop */
     @media (min-width: 900px) {
-      #services .cards-grid.services-grid-five {
+      #services .cards-grid.services-grid-six {
         display: grid;
-        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 1.5rem;
         align-items: stretch;
       }
+    }
 
-      #services .cards-grid.services-grid-five > .service-card {
-        grid-column: span 2;
-      }
+    .credibility-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.35rem;
+    }
 
-      #services .cards-grid.services-grid-five > .service-card:nth-child(4) {
-        grid-column: 2 / span 2;
+    @media (min-width: 900px) {
+      .credibility-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
       }
+    }
 
-      #services .cards-grid.services-grid-five > .service-card:nth-child(5) {
-        grid-column: 4 / span 2;
-      }
+    .credibility-card {
+      background: #ffffff;
+      border: 1px solid rgba(174, 176, 179, 0.55);
+      border-radius: 1rem;
+      padding: 1.1rem;
+      box-shadow: 0 14px 30px rgba(11, 37, 69, 0.06);
+    }
+
+    .credibility-card h3 {
+      color: #0B2545;
+      margin-top: 0;
+      margin-bottom: 0.45rem;
+      font-size: 1.05rem;
+    }
+
+    .credibility-card p {
+      color: #5B6770;
+      margin: 0;
+    }
+
+    .expertise-strip {
+      margin-top: 1.4rem;
+      background: #ffffff;
+      border: 1px solid rgba(3, 95, 46, 0.22);
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .tag-cloud span {
+      border: 1px solid rgba(3, 95, 46, 0.35);
+      background: #EDF5F0;
+      color: #0B2545;
+      border-radius: 999px;
+      padding: 0.35rem 0.65rem;
+      font-weight: 700;
+      font-size: 0.9rem;
     }
 
     /* Larger section labels for Services, Training, and Formats */
@@ -105,6 +150,7 @@
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" data-i18n="menuButton">Menu</button>
       <ul id="nav-menu" class="nav-menu">
+        <li><a href="#about" data-i18n="navAbout">About</a></li>
         <li><a href="#services" data-i18n="navServices">Services</a></li>
         <li><a href="#training" data-i18n="navTraining">Training</a></li>
         <li><a href="#formats" data-i18n="navFormats">Formats</a></li>
@@ -150,6 +196,52 @@
         <h2 data-i18n="aboutTitle">Practical support for research teams</h2>
       </div>
       <p class="wide-text" data-i18n="aboutText">BIRD is a Montréal-based bioinformatics consulting service supporting academic laboratories, research teams, students, biotech startups, and life sciences organizations. We help researchers make complex biological data analysis clearer, reproducible, well documented, and easier to transfer to students, trainees, and collaborators.</p>
+      <p class="wide-text" data-i18n="aboutText2">BIRD brings senior bioinformatics experience from academic research environments, including omics and NGS analysis, research data organization, reproducible workflow development, training, mentorship, and support for sensitive biological and genomic datasets.</p>
+    </section>
+
+    <section id="why" class="section section-soft">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="eyebrow section-label-large" data-i18n="whyLabel">Why BIRD?</p>
+          <h2 data-i18n="whyTitle">Senior expertise with a human-centered approach</h2>
+          <p data-i18n="whyIntro">BIRD combines technical bioinformatics expertise with patient, practical training and clear documentation so teams can understand, reproduce, and continue their analyses with confidence.</p>
+        </div>
+
+        <div class="credibility-grid">
+          <article class="credibility-card">
+            <h3 data-i18n="why1Title">Senior bioinformatics experience</h3>
+            <p data-i18n="why1Text">More than 10 years of experience supporting multidisciplinary academic research projects and bioinformatics platforms.</p>
+          </article>
+          <article class="credibility-card">
+            <h3 data-i18n="why2Title">Reproducible workflows</h3>
+            <p data-i18n="why2Text">Emphasis on clear project structure, documented methods, transferable scripts, and analysis handover.</p>
+          </article>
+          <article class="credibility-card">
+            <h3 data-i18n="why3Title">Training that builds autonomy</h3>
+            <p data-i18n="why3Text">Practical teaching and mentorship for biologists, students, research staff, and interdisciplinary teams.</p>
+          </article>
+          <article class="credibility-card">
+            <h3 data-i18n="why4Title">Responsible data practices</h3>
+            <p data-i18n="why4Text">Support for organizing metadata, access-controlled files, sensitive biological data, and responsible research workflows.</p>
+          </article>
+        </div>
+
+        <div class="expertise-strip">
+          <strong data-i18n="expertiseTitle">Specialized expertise includes:</strong>
+          <div class="tag-cloud" aria-label="Specialized expertise">
+            <span data-i18n="expertiseTag1">PhIP-seq</span>
+            <span data-i18n="expertiseTag2">RNA-seq</span>
+            <span data-i18n="expertiseTag3">scRNA-seq</span>
+            <span data-i18n="expertiseTag4">WGS/WES</span>
+            <span data-i18n="expertiseTag5">GWAS/CNV</span>
+            <span data-i18n="expertiseTag6">Metagenomics</span>
+            <span data-i18n="expertiseTag7">10X Genomics</span>
+            <span data-i18n="expertiseTag8">HPC/SLURM</span>
+            <span data-i18n="expertiseTag9">Biological databases</span>
+            <span data-i18n="expertiseTag10">Workflow documentation</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="services" class="section section-soft">
@@ -160,7 +252,7 @@
           <p data-i18n="servicesIntro">A concise service menu for laboratories, research teams, students, and life sciences organizations.</p>
         </div>
 
-        <div class="cards-grid services-grid-five">
+        <div class="cards-grid services-grid-six">
           <article class="service-card">
             <h3 data-i18n="s1Title">Study Design & Bioinformatics Consultation</h3>
             <p data-i18n="s1Text">Bioinformatics study planning, including sample and metadata structure, replicates, comparison planning and downstream analysis strategy.</p>
@@ -184,6 +276,11 @@
           <article class="service-card">
             <h3 data-i18n="s5Title">Mentorship & Scientific Guidance</h3>
             <p data-i18n="s5Text">Scientific and technical guidance for students, trainees and research teams, including project planning, code review, data interpretation and workflow documentation.</p>
+          </article>
+
+          <article class="service-card">
+            <h3 data-i18n="s6Title">Research Data Management & Governance</h3>
+            <p data-i18n="s6Text">Support for organizing research data, metadata, documentation, access-controlled files, reproducible project structure, and responsible handling of sensitive biological and genomic datasets.</p>
           </article>
         </div>
       </div>
@@ -260,23 +357,47 @@
           skip: 'Skip to content',
           brandSubtitle: 'Bioinformatics, Research & Data',
           menuButton: 'Menu',
+          navAbout: 'About',
           navServices: 'Services',
           navTraining: 'Training',
           navFormats: 'Formats',
           navContact: 'Contact',
           heroEyebrow: 'Bioinformatics, Research & Data · Bioinformatique, Recherche & Données',
           heroTitle: 'Bioinformatics support for your research project',
-          heroLead: 'Practical bioinformatics, data analysis, training, and reproducible research workflow support for laboratories and life sciences teams.',
+          heroLead: 'Practical bioinformatics, data analysis, research data organization, training, and reproducible workflow support for laboratories and life sciences teams.',
           heroCopyEmail: 'Email us for a free consultation session',
           heroExplore: 'Explore services',
           heroMicrocopy: 'Free 30-minute initial consultation available for new projects.',
           heroCardTitle: 'From study design to reproducible analysis',
-          heroCardText: 'Workflow development, training, troubleshooting, documentation, and scientific mentorship.',
+          heroCardText: 'Workflow development, data organization, training, troubleshooting, documentation, and scientific mentorship.',
           noticeStrong: 'Free 30-minute initial consultation available for new projects.',
           noticeText: 'Use this meeting to discuss your project goals, data type, timeline, current challenges, and possible next steps. Detailed study design, data analysis, troubleshooting, code review, and technical support are available as separate services.',
           aboutLabel: 'About BIRD',
           aboutTitle: 'Practical support for research teams',
           aboutText: 'BIRD is a Montréal-based bioinformatics consulting service supporting academic laboratories, research teams, students, biotech startups, and life sciences organizations. We help researchers make complex biological data analysis clearer, reproducible, well documented, and easier to transfer to students, trainees, and collaborators.',
+          aboutText2: 'BIRD brings senior bioinformatics experience from academic research environments, including omics and NGS analysis, research data organization, reproducible workflow development, training, mentorship, and support for sensitive biological and genomic datasets.',
+          whyLabel: 'Why BIRD?',
+          whyTitle: 'Senior expertise with a human-centered approach',
+          whyIntro: 'BIRD combines technical bioinformatics expertise with patient, practical training and clear documentation so teams can understand, reproduce, and continue their analyses with confidence.',
+          why1Title: 'Senior bioinformatics experience',
+          why1Text: 'More than 10 years of experience supporting multidisciplinary academic research projects and bioinformatics platforms.',
+          why2Title: 'Reproducible workflows',
+          why2Text: 'Emphasis on clear project structure, documented methods, transferable scripts, and analysis handover.',
+          why3Title: 'Training that builds autonomy',
+          why3Text: 'Practical teaching and mentorship for biologists, students, research staff, and interdisciplinary teams.',
+          why4Title: 'Responsible data practices',
+          why4Text: 'Support for organizing metadata, access-controlled files, sensitive biological data, and responsible research workflows.',
+          expertiseTitle: 'Specialized expertise includes:',
+          expertiseTag1: 'PhIP-seq',
+          expertiseTag2: 'RNA-seq',
+          expertiseTag3: 'scRNA-seq',
+          expertiseTag4: 'WGS/WES',
+          expertiseTag5: 'GWAS/CNV',
+          expertiseTag6: 'Metagenomics',
+          expertiseTag7: '10X Genomics',
+          expertiseTag8: 'HPC/SLURM',
+          expertiseTag9: 'Biological databases',
+          expertiseTag10: 'Workflow documentation',
           servicesLabel: 'Services',
           servicesTitle: 'How BIRD can support your team?',
           servicesIntro: 'A concise service menu for laboratories, research teams, students, and life sciences organizations.',
@@ -290,9 +411,11 @@
           s4Text: 'Python, R, and Bash for biologists, basic bioinformatics, sequencing basics, biological databases: SRA, GEO, UCSC, etc., biological data file formats, research data organization, HPC and Alliance cluster basics and practical project-based training.',
           s5Title: 'Mentorship & Scientific Guidance',
           s5Text: 'Scientific and technical guidance for students, trainees and research teams, including project planning, code review, data interpretation and workflow documentation.',
+          s6Title: 'Research Data Management & Governance',
+          s6Text: 'Support for organizing research data, metadata, documentation, access-controlled files, reproducible project structure, and responsible handling of sensitive biological and genomic datasets.',
           trainingLabel: 'Training',
           trainingTitle: 'Capacity building for biologists and research teams',
-          trainingText: 'Training can be offered as one-on-one sessions, group workshops, or project-based mentoring using examples that match your team’s data and goals.',
+          trainingText: 'Training can be offered as one-on-one sessions, group workshops, or project-based mentoring using examples that match your team’s data and goals, with a focus on practical autonomy and reproducible habits.',
           t1: 'Python, R, and Bash for biologists',
           t2: 'Basic bioinformatics concepts',
           t3: 'Sequencing technologies and NGS basics',
@@ -331,23 +454,47 @@
           skip: 'Aller au contenu',
           brandSubtitle: 'Bioinformatique, Recherche & Données',
           menuButton: 'Menu',
+          navAbout: 'À propos',
           navServices: 'Services',
           navTraining: 'Formation',
           navFormats: 'Formats',
           navContact: 'Contact',
           heroEyebrow: 'Bioinformatics, Research & Data · Bioinformatique, Recherche & Données',
           heroTitle: 'Soutien bioinformatique pour votre projet de recherche',
-          heroLead: 'Soutien pratique en bioinformatique, analyse de données, formation et flux de travail reproductibles pour les laboratoires et les équipes en sciences de la vie.',
+          heroLead: 'Soutien pratique en bioinformatique, analyse de données, organisation des données de recherche, formation et flux de travail reproductibles pour les laboratoires et les équipes en sciences de la vie.',
           heroCopyEmail: 'Écrivez-nous pour une consultation gratuite',
           heroExplore: 'Explorer les services',
           heroMicrocopy: 'Consultation initiale gratuite de 30 minutes offerte pour les nouveaux projets.',
           heroCardTitle: 'De la conception d’étude à l’analyse reproductible',
-          heroCardText: 'Développement de flux de travail, formation, dépannage, documentation et mentorat scientifique.',
+          heroCardText: 'Développement de flux de travail, organisation des données, formation, dépannage, documentation et mentorat scientifique.',
           noticeStrong: 'Consultation initiale gratuite de 30 minutes offerte pour les nouveaux projets.',
           noticeText: 'Cette rencontre permet de discuter des objectifs du projet, du type de données, de l’échéancier, des défis actuels et des prochaines étapes possibles. La conception détaillée d’étude, l’analyse de données, le dépannage, la révision de code et le soutien technique sont offerts comme services distincts.',
           aboutLabel: 'À propos de BIRD',
           aboutTitle: 'Soutien pratique pour les équipes de recherche',
           aboutText: 'BIRD est un service montréalais de consultation en bioinformatique qui accompagne les laboratoires universitaires, les équipes de recherche, les étudiants, les entreprises en biotechnologie et les organisations en sciences de la vie. Nous aidons les chercheurs à rendre l’analyse de données biologiques complexes plus claire, reproductible, bien documentée et plus facilement transférable aux étudiants, stagiaires et collaborateurs.',
+          aboutText2: 'BIRD s’appuie sur une expertise senior en bioinformatique acquise en milieu de recherche académique, incluant l’analyse omique et NGS, l’organisation des données de recherche, le développement de flux de travail reproductibles, la formation, le mentorat et le soutien aux jeux de données biologiques et génomiques sensibles.',
+          whyLabel: 'Pourquoi BIRD ?',
+          whyTitle: 'Une expertise senior avec une approche humaine',
+          whyIntro: 'BIRD combine l’expertise technique en bioinformatique avec une formation pratique, patiente et une documentation claire afin d’aider les équipes à comprendre, reproduire et poursuivre leurs analyses avec confiance.',
+          why1Title: 'Expérience senior en bioinformatique',
+          why1Text: 'Plus de 10 ans d’expérience dans le soutien de projets de recherche académiques multidisciplinaires et de plateformes bioinformatiques.',
+          why2Title: 'Flux de travail reproductibles',
+          why2Text: 'Accent mis sur une structure de projet claire, des méthodes documentées, des scripts transférables et le transfert des analyses.',
+          why3Title: 'Formation qui favorise l’autonomie',
+          why3Text: 'Enseignement pratique et mentorat pour biologistes, étudiants, personnel de recherche et équipes interdisciplinaires.',
+          why4Title: 'Pratiques responsables des données',
+          why4Text: 'Soutien pour organiser les métadonnées, les fichiers à accès contrôlé, les données biologiques sensibles et les flux de travail responsables.',
+          expertiseTitle: 'Expertises spécialisées :',
+          expertiseTag1: 'PhIP-seq',
+          expertiseTag2: 'RNA-seq',
+          expertiseTag3: 'scRNA-seq',
+          expertiseTag4: 'WGS/WES',
+          expertiseTag5: 'GWAS/CNV',
+          expertiseTag6: 'Métagénomique',
+          expertiseTag7: '10X Genomics',
+          expertiseTag8: 'HPC/SLURM',
+          expertiseTag9: 'Bases de données biologiques',
+          expertiseTag10: 'Documentation des flux de travail',
           servicesLabel: 'Services',
           servicesTitle: 'Comment BIRD peut soutenir votre équipe ?',
           servicesIntro: 'Un menu de services concis pour les laboratoires, les équipes de recherche, les étudiants et les organisations en sciences de la vie.',
@@ -361,9 +508,11 @@
           s4Text: 'Python, R et Bash pour biologistes, bases de la bioinformatique, bases du séquençage, bases de données biologiques : SRA, GEO, UCSC, etc., formats de fichiers biologiques, organisation des données de recherche, bases du HPC et des grappes de calcul de l’Alliance, et formation pratique basée sur des projets.',
           s5Title: 'Mentorat et accompagnement scientifique',
           s5Text: 'Accompagnement scientifique et technique pour les étudiants, stagiaires et équipes de recherche, incluant la planification de projet, la révision de code, l’interprétation des données et la documentation des flux de travail.',
+          s6Title: 'Gestion et gouvernance des données de recherche',
+          s6Text: 'Soutien à l’organisation des données de recherche, des métadonnées, de la documentation, des fichiers à accès contrôlé, de la structure reproductible des projets et de la gestion responsable des données biologiques et génomiques sensibles.',
           trainingLabel: 'Formation',
           trainingTitle: 'Renforcement des capacités pour les biologistes et les équipes de recherche',
-          trainingText: 'La formation peut être offerte sous forme de séances individuelles, d’ateliers de groupe ou de mentorat basé sur un projet, avec des exemples adaptés aux données et aux objectifs de votre équipe.',
+          trainingText: 'La formation peut être offerte sous forme de séances individuelles, d’ateliers de groupe ou de mentorat basé sur un projet, avec des exemples adaptés aux données et aux objectifs de votre équipe, et un accent sur l’autonomie pratique et les habitudes reproductibles.',
           t1: 'Python, R et Bash pour biologistes',
           t2: 'Concepts de base en bioinformatique',
           t3: 'Technologies de séquençage et bases du NGS',
