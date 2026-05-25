@@ -20,6 +20,13 @@ body{
   background:var(--white);
   line-height:1.6;
 }
+
+.services-label {
+  color: #035F2E;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .container{width:min(1120px, calc(100% - 40px));margin-inline:auto}
