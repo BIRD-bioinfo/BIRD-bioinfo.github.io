@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BIRD — Bioinformatics, Research & Data</title>
-  <meta name="description" content="BIRD provides bioinformatics consulting, omics and NGS data analysis, PhIP-seq and peptide-library design support, reproducible workflow development, and training for research teams.">
+  <meta name="description" content="BIRD provides bioinformatics consultation, omics and NGS data analysis, pipeline development, automation, troubleshooting, training, mentorship, and reproducible workflow support for research teams.">
   <meta name="theme-color" content="#0B2545">
   <meta property="og:title" content="BIRD — Bioinformatics, Research & Data">
-  <meta property="og:description" content="Bioinformatics consulting, omics data analysis, training, and reproducible research workflows.">
+  <meta property="og:description" content="Bioinformatics support, omics and NGS analysis, training, mentorship, and reproducible research workflows.">
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/bird_logo.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
@@ -39,12 +39,13 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Bioinformatics, Research & Data · Bioinformatique, Recherche & Données</p>
-          <h1>Bioinformatics support for your next research project</h1>
+          <h1>Bioinformatics support for your research project</h1>
           <p class="hero-lead">Practical bioinformatics, data analysis, training, and reproducible research workflow support for laboratories and life sciences teams.</p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="btn btn-primary" href="mailto:bird.bioinfo@gmail.com?subject=Free%2030-minute%20consultation%20request">Request a free consultation</a>
+            <button class="btn btn-primary copy-email-btn" type="button" data-copy-email="bird.bioinfo@gmail.com">Copy email for a free consultation</button>
             <a class="btn btn-secondary" href="#services">Explore services</a>
           </div>
+          <p class="microcopy" data-copy-status hidden></p>
           <p class="microcopy">Free 30-minute initial consultation available for new projects.</p>
         </div>
         <div class="hero-card" aria-label="BIRD service summary">
@@ -72,8 +73,8 @@
       <div class="container">
         <div class="section-heading centered">
           <p class="eyebrow">Services</p>
-          <h2>Core service areas</h2>
-          <p>Flexible project-based or ongoing support adapted to your lab’s needs, budget, and timeline.</p>
+          <h2>How BIRD can support your team</h2>
+          <p>A concise service menu for laboratories, research teams, students, and life sciences organizations.</p>
         </div>
 
         <div class="cards-grid">
@@ -81,10 +82,10 @@
             <h3>Study Design & Bioinformatics Consultation</h3>
             <p>Planning support before data generation or analysis.</p>
             <ul>
-              <li>Research question and analysis strategy</li>
-              <li>Sample groups, controls, and replicates</li>
-              <li>Metadata and sample organization</li>
-              <li>Sequencing and downstream analysis planning</li>
+              <li>Sample and metadata structure</li>
+              <li>Controls, replicates, and comparison planning</li>
+              <li>Feasibility assessment</li>
+              <li>Sequencing and downstream analysis strategy</li>
               <li>Data management and reproducibility advice</li>
             </ul>
           </article>
@@ -93,23 +94,11 @@
             <h3>Omics & NGS Data Analysis</h3>
             <p>Support for omics and sequencing data analysis.</p>
             <ul>
+              <li>Quality control and exploratory analysis</li>
               <li>RNA-seq and differential expression</li>
-              <li>Genomics and variant-analysis support</li>
-              <li>PhIP-seq and peptide-enrichment analysis</li>
-              <li>Quality control, exploratory analysis, figures, and reports</li>
-              <li>Reproducible scripts and documentation</li>
-            </ul>
-          </article>
-
-          <article class="service-card">
-            <h3>PhIP-seq & Peptide-Library Design</h3>
-            <p>Specialized support for PhIP-seq and peptide-library design.</p>
-            <ul>
-              <li>Peptide tiling strategy</li>
-              <li>Antigen, protein, organism, or target selection</li>
-              <li>FASTA and protein sequence preparation</li>
-              <li>Annotation tables and control peptide planning</li>
-              <li>Downstream enrichment-analysis strategy</li>
+              <li>Single-cell analysis</li>
+              <li>Metagenomics and metabarcoding</li>
+              <li>ATAC-seq, methylation analysis, figures, tables, scripts, and reports</li>
             </ul>
           </article>
 
@@ -117,11 +106,11 @@
             <h3>Pipelines, Automation & Troubleshooting</h3>
             <p>Support with computational workflows and technical bottlenecks.</p>
             <ul>
-              <li>Python, R, Bash, and Linux troubleshooting</li>
-              <li>Pipeline development and optimization</li>
+              <li>Python, R, and Bash workflows</li>
+              <li>Automation and metadata validation</li>
               <li>FASTQ organization and data-transfer workflows</li>
-              <li>HPC and SLURM/Torque support on Alliance clusters</li>
-              <li>README files, SOPs, and workflow handover</li>
+              <li>HPC and SLURM/Torque support</li>
+              <li>README files, SOPs, and workflow handover documentation</li>
             </ul>
           </article>
 
@@ -130,9 +119,9 @@
             <p>Personalized training for students and research team members.</p>
             <ul>
               <li>Python, R, and Bash for biologists</li>
-              <li>Basics of bioinformatics and sequencing</li>
+              <li>Basic bioinformatics and sequencing basics</li>
               <li>Public databases, including NCBI, SRA, GEO, GO, and BLAST</li>
-              <li>Biological data file formats, including FASTA, FASTQ, BAM, VCF, and GTF/GFF</li>
+              <li>Biological data file formats</li>
               <li>Research data organization and reproducible workflows</li>
             </ul>
           </article>
@@ -141,8 +130,8 @@
             <h3>Mentorship & Scientific Guidance</h3>
             <p>Technical guidance for students and research teams.</p>
             <ul>
-              <li>Student project support</li>
-              <li>Analysis planning and code review</li>
+              <li>Student and trainee project support</li>
+              <li>Project planning and code review</li>
               <li>Data interpretation support</li>
               <li>Methods and workflow documentation</li>
               <li>Scientific and technical communication support</li>
@@ -165,7 +154,11 @@
           <li>Sequencing technologies and NGS basics</li>
           <li>FASTA, FASTQ, BAM, VCF, and GTF/GFF files</li>
           <li>NCBI, SRA, GEO, GO, BLAST, and public databases</li>
-          <li>Linux, HPC, Alliance clusters, and reproducible workflows</li>
+          <li>Linux and Bash for researchers</li>
+          <li>HPC and Alliance cluster basics</li>
+          <li>Research data organization and reproducibility</li>
+          <li>Workflow documentation and handover</li>
+          <li>Practical project-based training</li>
         </ul>
       </div>
     </section>
@@ -178,10 +171,11 @@
         </div>
         <div class="format-grid">
           <div><strong>Free initial consultation</strong><span>30-minute orientation for new projects.</span></div>
-          <div><strong>Hourly support</strong><span>Troubleshooting, code review, and technical guidance.</span></div>
-          <div><strong>Fixed-price packages</strong><span>Defined analyses, audits, training, or documentation.</span></div>
-          <div><strong>Customized workshops</strong><span>Practical training adapted to your team.</span></div>
-          <div><strong>Monthly lab support</strong><span>Ongoing help without hiring full-time staff.</span></div>
+          <div><strong>Hourly support</strong><span>Troubleshooting, technical questions, code review, and focused guidance.</span></div>
+          <div><strong>Fixed-price packages</strong><span>Defined analyses, workflow audits, study design consultations, documentation, or training sessions.</span></div>
+          <div><strong>Customized workshops</strong><span>Practical training adapted to a lab, team, course, research group, or specific dataset.</span></div>
+          <div><strong>One-on-one training</strong><span>Personalized training adapted to a learner’s project and skill level.</span></div>
+          <div><strong>Monthly lab support</strong><span>Ongoing bioinformatics help without hiring a full-time bioinformatician.</span></div>
         </div>
       </div>
     </section>
@@ -194,9 +188,11 @@
           <p>Services are provided independently through BIRD and can be adapted to each laboratory’s needs, budget, and timeline. Institutional logos, confidential information, and unpublished project details are not used without prior authorization.</p>
         </div>
         <div class="contact-actions">
-          <a class="btn btn-primary" href="mailto:bird.bioinfo@gmail.com?subject=Project%20consultation%20request">bird.bioinfo@gmail.com</a>
+          <button class="btn btn-primary copy-email-btn" type="button" data-copy-email="bird.bioinfo@gmail.com">Copy email address</button>
           <a class="btn btn-secondary" href="assets/BIRD_pamphlet.pdf">Download pamphlet</a>
+          <p class="location">bird.bioinfo@gmail.com</p>
           <p class="location">Montréal, Québec · Services available in English and French</p>
+          <p class="microcopy" data-copy-status hidden></p>
         </div>
       </div>
     </section>
@@ -209,6 +205,58 @@
     </div>
   </footer>
 
+  <script>
+    (function () {
+      const fallbackCopy = function (text) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.setAttribute('readonly', '');
+        textarea.style.position = 'fixed';
+        textarea.style.top = '-9999px';
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+          document.execCommand('copy');
+          return true;
+        } catch (error) {
+          return false;
+        } finally {
+          document.body.removeChild(textarea);
+        }
+      };
+
+      const showCopyStatus = function (message) {
+        document.querySelectorAll('[data-copy-status]').forEach(function (status) {
+          status.textContent = message;
+          status.removeAttribute('hidden');
+        });
+      };
+
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('[data-copy-email]').forEach(function (button) {
+          button.addEventListener('click', async function () {
+            const email = button.getAttribute('data-copy-email') || 'bird.bioinfo@gmail.com';
+            let copied = false;
+
+            if (navigator.clipboard && window.isSecureContext) {
+              try {
+                await navigator.clipboard.writeText(email);
+                copied = true;
+              } catch (error) {
+                copied = false;
+              }
+            }
+
+            if (!copied) {
+              copied = fallbackCopy(email);
+            }
+
+            showCopyStatus(copied ? `Email copied: ${email}` : `Please copy this email: ${email}`);
+          });
+        });
+      });
+    })();
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
