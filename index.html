@@ -54,6 +54,36 @@
       margin: 0;
     }
 
+
+
+    .hero-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-card-header .hero-logo {
+      flex: 0 0 auto;
+      margin: 0;
+      max-width: 82px;
+      height: auto;
+    }
+
+    .hero-card-header h2 {
+      margin: 0;
+    }
+
+    @media (max-width: 520px) {
+      .hero-card-header {
+        gap: 0.75rem;
+      }
+
+      .hero-card-header .hero-logo {
+        max-width: 68px;
+      }
+    }
+
     .expertise-strip {
       margin-top: 1.4rem;
       background: #ffffff;
@@ -178,8 +208,10 @@
           <p class="microcopy" data-i18n="heroMicrocopy">Free 30-minute initial consultation available for new projects.</p>
         </div>
         <div class="hero-card" aria-label="BIRD service summary">
-          <img src="assets/bird_logo.png" alt="" class="hero-logo">
-          <h2 data-i18n="heroCardTitle">From study design to reproducible analysis</h2>
+          <div class="hero-card-header">
+            <img src="assets/bird_logo.png" alt="" class="hero-logo">
+            <h2 data-i18n="heroCardTitle">From study design to reproducible analysis</h2>
+          </div>
           <p data-i18n="heroCardText">Workflow development, training, troubleshooting, documentation, and scientific mentorship.</p>
         </div>
       </div>
