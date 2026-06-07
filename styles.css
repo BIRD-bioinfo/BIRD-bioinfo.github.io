@@ -27,6 +27,27 @@ body{
   font-weight: 800;
   letter-spacing: 0.08em;
 }
+
+.hero-card-heading {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-card-heading h2 {
+  margin: 0;
+}
+
+.with-bird-label {
+  color: #014a14;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  line-height: 1.15;
+  margin: 0.35rem 1rem 0 0;
+  text-align: right;
+}
+
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .container{width:min(1120px, calc(100% - 40px));margin-inline:auto}
