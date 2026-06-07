@@ -37,7 +37,7 @@ body{
   margin: 0;
 }
 
-.with-bird-label {
+.hero-card .with-bird-label {
   color: #014a14;
   font-weight: 900;
   letter-spacing: 0.12em;
