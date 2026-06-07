@@ -28,6 +28,26 @@ body{
   letter-spacing: 0.08em;
 }
 
+@media (min-width: 950px) {
+  .hero-copy {
+    grid-column: 1 / -1;
+    max-width: 980px;
+  }
+
+  .hero-card {
+    width: min(880px, 100%);
+  }
+
+  .hero-card-heading {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .hero-card .hero-card-heading h2 {
+    white-space: nowrap;
+  }
+}
+
 .hero-card-heading {
   flex: 1;
   min-width: 0;
