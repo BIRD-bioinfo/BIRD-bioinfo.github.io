@@ -28,14 +28,14 @@ body{
   letter-spacing: 0.08em;
 }
 
-@media (min-width: 950px) {
+@media (min-width: 850px) {
   .hero-copy {
     grid-column: 1 / -1;
-    max-width: 980px;
+    max-width: 880px;
   }
 
   .hero-card {
-    width: min(880px, 100%);
+    width: min(780px, 100%);
   }
 
   .hero-card-heading {
