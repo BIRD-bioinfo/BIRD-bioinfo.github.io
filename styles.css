@@ -828,3 +828,23 @@ h3 {
     white-space: normal;
   }
 }
+
+.contact-card .eyebrow {
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: #035F2E;
+  margin-bottom: 0.75rem;
+}
+
+/* Final hero title size correction */
+.hero h1 {
+  font-size: clamp(2.4rem, 4.1vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  max-width: 900px;
+}
+
+.hero-lead {
+  max-width: 820px;
+}
