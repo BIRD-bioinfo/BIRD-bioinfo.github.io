@@ -21,6 +21,14 @@ body{
   line-height:1.6;
 }
 
+.hero .contact-actions {
+  margin-bottom: 1.6rem;
+}
+
+.hero .hero-card {
+  margin-top: 1.6rem;
+}
+
 .services-label {
   color: #035F2E;
   font-size: 1.5rem;
