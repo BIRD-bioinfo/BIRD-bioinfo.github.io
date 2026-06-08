@@ -848,3 +848,9 @@ h3 {
 .hero-lead {
   max-width: 820px;
 }
+
+/* Make hero-card title larger */
+.hero-card-heading h2 {
+  font-size: 1.55rem;
+  line-height: 1.08;
+}
