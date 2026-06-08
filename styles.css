@@ -811,3 +811,20 @@ h3 {
 .hero-copy > .hero-card {
   margin-top: 0;
 }
+
+
+/* Make the white hero box wider on laptop/desktop */
+@media (min-width: 950px) {
+  .hero-copy {
+    max-width: 900px;
+  }
+
+  .hero-copy > .hero-card {
+    width: 100%;
+    max-width: 760px;
+  }
+
+  .hero-card-heading h2 {
+    white-space: normal;
+  }
+}
