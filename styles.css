@@ -774,3 +774,30 @@ h3 {
     margin-top: 0.75rem;
   }
 }
+
+/* Give more space to the main hero text */
+@media (min-width: 950px) {
+  .hero .container {
+    width: min(1280px, calc(100% - 72px));
+  }
+
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(420px, 0.65fr);
+    gap: 56px;
+    align-items: center;
+  }
+
+  .hero-copy {
+    max-width: 820px;
+  }
+
+  .hero-lead {
+    max-width: 780px;
+  }
+
+  .hero-card {
+    width: 100%;
+    max-width: 520px;
+    justify-self: end;
+  }
+}
