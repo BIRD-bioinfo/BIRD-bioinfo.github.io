@@ -48,7 +48,6 @@
   margin: 0;
 }
 
-
 /* Hero spacing */
 .hero .contact-actions {
   margin-bottom: 1.8rem;
@@ -58,34 +57,50 @@
   margin-top: 1.8rem;
 }
 
-/* Hero card layout */
-.hero-card-header {
-  display: flex;
-  align-items: center;
+/* Hero card size */
+@media (min-width: 850px) {
+  .hero-copy {
+    grid-column: 1 / -1;
+    max-width: 880px;
+  }
+
+  .hero .hero-card {
+    width: min(780px, 100%);
+  }
+}
+
+/* Hero card header: logo left, title + With BIRD right */
+.hero .hero-card .hero-card-header {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
   gap: 1.2rem;
   margin-bottom: 0.75rem;
 }
 
-.hero-card-header .hero-logo {
-  flex: 0 0 125px;
-  width: 125px;
-  max-width: 125px;
-  height: auto;
-  margin: 0;
+.hero .hero-card .hero-card-header .hero-logo {
+  flex: 0 0 125px !important;
+  width: 125px !important;
+  max-width: 125px !important;
+  height: auto !important;
+  margin: 0 !important;
 }
 
-.hero-card-heading {
-  flex: 1;
+.hero .hero-card .hero-card-heading {
+  flex: 1 1 auto;
   min-width: 0;
 }
 
-.hero-card-heading h2 {
+.hero .hero-card .hero-card-heading h2 {
   margin: 0;
   line-height: 1.08;
+  white-space: normal;
 }
 
-.hero-card .with-bird-label {
-  color: #014a14;
+.hero .hero-card .with-bird-label {
+  color: #014a14 !important;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -95,60 +110,26 @@
   text-align: left;
 }
 
-@media (max-width: 520px) {
-  .hero-card-header {
-    gap: 0.85rem;
-  }
-
-  .hero-card-header .hero-logo {
-    flex: 0 0 90px;
-    width: 90px;
-    max-width: 90px;
-  }
-
-  .hero-card-heading h2 {
-    font-size: 1.25rem;
-  }
-
-  .hero-card .with-bird-label {
-    font-size: 0.9rem;
-  }
-}
-
-
-
-/* Hero card width */
-@media (min-width: 850px) {
-  .hero-copy {
-    grid-column: 1 / -1;
-    max-width: 880px;
-  }
-
-  .hero-card {
-    width: min(780px, 100%);
-  }
-}
-
 /* Mobile hero card */
 @media (max-width: 520px) {
-  .hero-card-header {
-    flex-direction: row;
-    align-items: center;
+  .hero .hero-card .hero-card-header {
+    flex-direction: row !important;
+    align-items: center !important;
     gap: 0.85rem;
   }
 
-  .hero-card-header .hero-logo {
-    flex: 0 0 90px;
-    width: 90px;
-    max-width: 90px;
+  .hero .hero-card .hero-card-header .hero-logo {
+    flex: 0 0 90px !important;
+    width: 90px !important;
+    max-width: 90px !important;
   }
 
-  .hero-card-heading h2 {
+  .hero .hero-card .hero-card-heading h2 {
     font-size: 1.25rem;
     white-space: normal;
   }
 
-  .hero-card .with-bird-label {
+  .hero .hero-card .with-bird-label {
     font-size: 0.9rem;
   }
 }
@@ -225,3 +206,4 @@
     margin-top: 0.75rem;
   }
 }
+
