@@ -810,3 +810,12 @@ h3 {
 .hero-copy .hero-card {
   margin-top: 2rem;
 }
+
+/* Final spacing between hero buttons and the white hero box */
+.hero .contact-actions {
+  margin-bottom: 2.8rem;
+}
+
+.hero-copy > .hero-card {
+  margin-top: 0;
+}
