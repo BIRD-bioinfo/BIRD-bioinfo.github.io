@@ -147,6 +147,10 @@ img {
   overflow: hidden;
 }
 
+
+
+
+
 .hero::after {
   content: "";
   position: absolute;
@@ -574,26 +578,169 @@ h3 {
   margin: 0;
 }
 
-/* Hero spacing */
-.hero .contact-actions {
-  margin-bottom: 1.8rem;
+/* Hero card header: logo left, text right */
+.hero-card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 0.75rem;
 }
 
-.hero .hero-card {
-  margin-top: 1.8rem;
+.hero-card-header .hero-logo {
+  flex: 0 0 145px;
+  width: 145px;
+  max-width: 145px;
+  height: auto;
+  margin: 0;
 }
 
-/* Make hero content full width because hero-card is inside hero-copy */
-@media (min-width: 850px) {
-  .hero-copy {
-    grid-column: 1 / -1;
-    max-width: 880px;
+.hero-card-heading {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-card-heading h2 {
+  margin: 0;
+  line-height: 1.08;
+  white-space: normal;
+}
+
+.hero-card .with-bird-label {
+  color: #014a14;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  line-height: 1.15;
+  margin: 0.45rem 0 0 0;
+  text-align: left;
+}
+
+/* Specialized expertise strip */
+.expertise-strip {
+  margin-top: 1.4rem;
+  background: #ffffff;
+  border: 1px solid rgba(3, 95, 46, 0.22);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.tag-cloud span {
+  border: 1px solid rgba(3, 95, 46, 0.35);
+  background: #EDF5F0;
+  color: #0B2545;
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Larger section labels */
+.section-label-large {
+  color: #035F2E;
+  font-size: 1.4rem;
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.65rem;
+}
+
+.section-dark .eyebrow.section-label-large {
+  color: #7ACC8F;
+}
+
+/* EN / FR language buttons */
+.language-switcher {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+  margin-left: 0.75rem;
+}
+
+.language-switcher button {
+  border: 1px solid rgba(11, 37, 69, 0.25);
+  background: #ffffff;
+  color: #0B2545;
+  border-radius: 999px;
+  padding: 0.35rem 0.6rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.language-switcher button[aria-pressed="true"] {
+  background: #035F2E;
+  border-color: #035F2E;
+  color: #ffffff;
+}
+
+@media (max-width: 520px) {
+  .hero-card-header {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.85rem;
   }
 
-  .hero .hero-card {
-    width: min(780px, 100%);
+  .hero-card-header .hero-logo {
+    flex: 0 0 90px;
+    width: 90px;
+    max-width: 90px;
+  }
+
+  .hero-card-heading h2 {
+    font-size: 1.25rem;
+    white-space: normal;
+  }
+
+  .hero-card .with-bird-label {
+    font-size: 0.9rem;
   }
 }
+
+@media (max-width: 720px) {
+  .language-switcher {
+    margin-left: 0;
+    margin-top: 0.75rem;
+  }
+}
+
+
+/* Why BIRD credibility cards */
+.credibility-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.35rem;
+}
+
+.credibility-card {
+  background: #ffffff;
+  border: 1px solid rgba(174, 176, 179, 0.55);
+  border-radius: 1rem;
+  padding: 1.1rem;
+  box-shadow: 0 14px 30px rgba(11, 37, 69, 0.06);
+}
+
+.credibility-card h3 {
+  color: #0B2545;
+  margin-top: 0;
+  margin-bottom: 0.45rem;
+  font-size: 1.05rem;
+}
+
+.credibility-card p {
+  color: #5B6770;
+  margin: 0;
+}
+
 
 /* Hero card header: logo left, text right */
 .hero-card-header {
