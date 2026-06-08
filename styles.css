@@ -525,32 +525,8 @@ h3 {
   }
 }
 
+
 /* ===== BIRD custom layout overrides ===== */
-
-/* Wider hero layout on desktop */
-@media (min-width: 950px) {
-  .hero-grid {
-    grid-template-columns: minmax(0, 0.9fr) minmax(520px, 1.1fr);
-    gap: 64px;
-    align-items: center;
-  }
-
-  .hero-card {
-    width: 100%;
-  }
-}
-
-/* Extra vertical space only if the hero stacks or if hero-card is inside hero-copy */
-.hero-copy .hero-card {
-  margin-top: 2rem;
-}
-
-@media (max-width: 950px) {
-  .hero-card {
-    margin-top: 2rem;
-  }
-}
-
 
 /* Services and formats grids */
 @media (min-width: 900px) {
@@ -600,7 +576,48 @@ h3 {
   margin: 0;
 }
 
-/* Hero card header: logo left, text right */
+/* Wider hero area and wider hero box */
+@media (min-width: 1100px) {
+  .hero .container {
+    width: min(1400px, calc(100% - 56px));
+  }
+
+  .hero-grid {
+    grid-template-columns: minmax(0, 0.85fr) minmax(700px, 1.15fr);
+    gap: 80px;
+    align-items: center;
+  }
+
+  .hero-card {
+    width: 100%;
+  }
+}
+
+/* Medium desktop */
+@media (min-width: 950px) and (max-width: 1099px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(540px, 1fr);
+    gap: 56px;
+    align-items: center;
+  }
+
+  .hero-card {
+    width: 100%;
+  }
+}
+
+/* Space when the hero stacks */
+@media (max-width: 950px) {
+  .hero-grid {
+    gap: 2.2rem;
+  }
+
+  .hero-card {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Hero card internal layout */
 .hero-card-header {
   display: flex;
   flex-direction: row;
@@ -610,9 +627,9 @@ h3 {
 }
 
 .hero-card-header .hero-logo {
-  flex: 0 0 105px;
-  width: 105px;
-  max-width: 105px;
+  flex: 0 0 95px;
+  width: 95px;
+  max-width: 95px;
   height: auto;
   margin: 0;
 }
@@ -629,7 +646,8 @@ h3 {
   white-space: normal;
 }
 
-@media (min-width: 1050px) {
+/* Keep the French title on one line when there is enough space */
+@media (min-width: 1200px) {
   .hero-card-heading h2 {
     white-space: nowrap;
   }
@@ -718,13 +736,13 @@ h3 {
   }
 
   .hero-card-header .hero-logo {
-    flex: 0 0 90px;
-    width: 90px;
-    max-width: 90px;
+    flex: 0 0 85px;
+    width: 85px;
+    max-width: 85px;
   }
 
   .hero-card-heading h2 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     white-space: normal;
   }
 
