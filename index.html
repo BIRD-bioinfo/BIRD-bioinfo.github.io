@@ -234,9 +234,7 @@
         </div>
       
         <!-- <p class="location">bird.bioinfo@gmail.com</p> -->
-        <p class="location" data-i18n="location">
-          Montréal, Québec · Services available in English and French
-        </p>
+        <!-- <p class="location" data-i18n="location"> Montréal, Québec · Services available in English and French</p> -->
         <p class="microcopy" data-copy-status hidden></p>
       </div>
 
@@ -509,7 +507,7 @@
           s2Text: 'End-to-end support for omics and sequencing projects, including quality control, exploratory analysis, WGS, WES, RNA-seq, scRNA-seq, ChIP-seq, amplicon-seq, small RNA-seq, methyl-seq, ATAC-seq, PhIP-seq, metagenomics, metabarcoding and resistome analysis, with interpretation and preparation of clear figures, tables and reports.',
           s3Title: 'Pipelines, Data Organization & Troubleshooting',
           s3Text: 'Development, optimization and troubleshooting of Python, R and Bash workflows, with support for HPC and job-scheduler environments, including Slurm/Torque, automation and reproducible project structure.',
-          s4Title: 'Training for Biologists & Research Teams',
+          s4Title: 'Training for biologists and other life scientists & your research Teams',
           // s4Text: 'Practical training in Python, R, Bash, bioinformatics fundamentals, sequencing basics, biological databases, file formats, research data organization, HPC and Alliance cluster basics, adapted to the learner’s background and project needs.',
           s4Text: 'Practical training in Python, R, Bash, bioinformatics and data-analysis fundamentals, sequencing basics, biological databases, file formats, research data organization, HPC, and Alliance cluster basics, adapted to the learner’s background and project needs.',
 
@@ -539,7 +537,8 @@
           f2Text: 'Focused support for troubleshooting, technical questions, code review, short-term project needs and practical bioinformatics guidance.',
           f3Title: 'Fixed-price packages',
           f3Text: 'Structured support for defined analysis projects, workflow audits, study design consultations, documentation or training sessions.',
-          s4Title: 'Customized training workshops for Scientists & Research Teams',
+          // s4Title: 'Customized training workshops for Scientists & Research Teams',
+          s4Title: 'Training for biologists and other life scientists & your research Teams',
           f4Text: 'Practical workshops tailored to a team, course, research group or specific dataset.',
           f5Title: 'One-on-one training',
           f5Text: 'Personalized training adapted to the learner’s project, background and skill level.',
@@ -556,7 +555,107 @@
           copied: 'Email copied:',
           emailFallback: 'Email:'
         },
-        fr: {
+        // fr: {
+        //   skip: 'Aller au contenu',
+        //   brandSubtitle: 'Bioinformatique, Recherche & Données',
+        //   menuButton: 'Menu',
+        //   navAbout: 'À propos',
+        //   navServices: 'Services',
+        //   navTraining: 'Formation',
+        //   navFormats: 'Formats',
+        //   navContact: 'Contact',
+        //   heroEyebrow: 'Bioinformatics, Research & Data · Bioinformatique, Recherche & Données',
+        //   heroTitle: 'Soutien bioinformatique pour votre équipe de recherche',
+        //   heroLead: 'Soutien pratique en bioinformatique, analyse de données, organisation des données de recherche, formation et flux de travail reproductibles pour les laboratoires et les équipes en sciences de la vie.',
+        //   heroCopyEmail: 'Écrivez-nous pour une consultation gratuite',
+        //   heroExplore: 'Explorer les services',
+        //   heroMicrocopy: 'Consultation initiale gratuite de 30 minutes offerte pour les nouveaux projets.',
+        //   heroCardTitle: 'De la conception d’étude à l’analyse reproductible',
+        //   heroCardText: 'Développement de flux de travail, organisation des données, formation, dépannage, documentation et mentorat scientifique.',
+        //   noticeStrong: 'Consultation initiale gratuite de 30 minutes offerte pour les nouveaux projets.',
+        //   noticeText: 'Cette rencontre permet de discuter des objectifs du projet, du type de données, de l’échéancier, des défis actuels et des prochaines étapes possibles. La conception détaillée d’étude, l’analyse de données, le dépannage, la révision de code et le soutien technique sont offerts comme services distincts.',
+        //   aboutLabel: 'À propos de BIRD',
+        //   aboutTitle: 'Soutien pratique pour les équipes de recherche',
+        //   aboutText: 'BIRD est un service montréalais de consultation en bioinformatique qui accompagne les laboratoires universitaires, les équipes de recherche, les étudiants, les entreprises en biotechnologie et les organisations en sciences de la vie. Nous aidons les chercheurs à rendre l’analyse de données biologiques complexes plus claire, reproductible, bien documentée et plus facilement transférable aux étudiants, stagiaires et collaborateurs.',
+        //   aboutText2: 'BIRD s’appuie sur une expertise senior en bioinformatique acquise en milieu de recherche académique, incluant l’analyse omique et de données de séquençage, l’organisation des données de recherche, le développement de flux de travail reproductibles, la formation, le mentorat et le soutien aux jeux de données biologiques et génomiques sensibles.',
+        //   withBirdLabel: 'Avec BIRD',
+        //   whyLabel: 'Pourquoi BIRD ?',
+        //   whyTitle: 'Une expertise senior avec une approche humaine',
+        //   whyIntro: 'BIRD combine l’expertise technique en bioinformatique avec un accompagnement patient, une formation pratique et une documentation claire afin d’aider les équipes à comprendre, reproduire et poursuivre leurs analyses avec confiance.',
+        //   why1Title: 'Expérience senior en bioinformatique',
+        //   why1Text: 'Plus de 10 ans d’expérience dans le soutien de projets de recherche académiques multidisciplinaires et de plateformes bioinformatiques.',
+        //   why2Title: 'Flux de travail reproductibles',
+        //   why2Text: 'Accent mis sur une structure de projet claire, des méthodes documentées, des scripts transférables et le transfert des analyses.',
+        //   why3Title: 'Formation qui favorise l’autonomie',
+        //   why3Text: 'Enseignement pratique et mentorat pour biologistes, étudiants, personnel de recherche et équipes interdisciplinaires.',
+        //   why4Title: 'Pratiques responsables des données',
+        //   why4Text: 'Soutien pour organiser les métadonnées, les fichiers à accès contrôlé, les données biologiques sensibles et les flux de travail responsables.',
+        //   expertiseTitle: 'Expertises spécialisées :',
+        //   expertiseTag1: 'PhIP-seq',
+        //   expertiseTag2: 'RNA-seq',
+        //   expertiseTag3: 'scRNA-seq',
+        //   expertiseTag4: 'WGS/WES',
+        //   expertiseTag5: 'GWAS/CNV',
+        //   expertiseTag6: 'Métagénomique',
+        //   expertiseTag7: '10X Genomics',
+        //   expertiseTag8: 'HPC/Slurm',
+        //   expertiseTag9: 'Bases de données biologiques',
+        //   expertiseTag10: 'Documentation des flux de travail',
+        //   servicesLabel: 'Services',
+        //   servicesTitle: 'Comment BIRD peut soutenir votre équipe',
+        //   servicesIntro: 'Soutien pratique pour les équipes de recherche travaillant avec des données biologiques, de la planification à l’analyse, à la documentation et à la formation.',
+        //   s1Title: 'Conception d’étude et consultation en bioinformatique',
+        //   s1Text: 'Accompagnement bioinformatique à l’étape de planification, incluant la structure des échantillons et des métadonnées, la stratégie de réplicats, la conception des comparaisons et la stratégie d’analyse.',
+        //   s2Title: 'Analyse omique et de données de séquençage',
+        //   s2Text: 'Soutien de bout en bout pour les projets omiques et de séquençage, incluant le contrôle qualité, l’analyse exploratoire, WGS, WES, RNA-seq, scRNA-seq, ChIP-seq, amplicon-seq, small RNA-seq, methyl-seq, ATAC-seq, PhIP-seq, métagénomique, métabarcodage et analyse du résistome, avec interprétation et préparation de figures, tableaux et rapports clairs.',
+        //   s3Title: 'Pipelines, organisation des données et dépannage',
+        //   s3Text: 'Développement, optimisation et dépannage de workflows en Python, R et Bash, avec soutien pour les environnements HPC et les gestionnaires de tâches, incluant Slurm/Torque, l’automatisation et la structuration reproductible des projets.',
+        //   s4Title: 'Formation pour biologistes et équipes de recherche',
+        //   s4Text: 'Formation pratique en Python, R, Bash, concepts fondamentaux de bioinformatique, bases du séquençage, bases de données biologiques, formats de fichiers, organisation des données de recherche, bases du HPC et des grappes de calcul de l’Alliance, adaptée au profil de la personne apprenante et aux besoins du projet.',
+        //   s5Title: 'Mentorat et accompagnement scientifique',
+        //   s5Text: 'Accompagnement scientifique et technique pour les étudiants, stagiaires et équipes de recherche, incluant la planification de projet, la révision de code, l’interprétation des données, la documentation des flux de travail et le transfert de connaissances.',
+        //   s6Title: 'Gestion des données de recherche',
+        //   s6Text: 'Soutien à l’organisation des données de recherche, des métadonnées, de la documentation, des fichiers à accès contrôlé et de la structure des projets afin d’améliorer la clarté, la reproductibilité et le transfert des workflows.',
+        //   trainingLabel: 'Formation',
+        //   trainingTitle: 'Renforcement des capacités pour les scientique et les équipes de recherche',
+        //   trainingText: 'La formation peut être offerte sous forme de séances individuelles, d’ateliers de groupe ou de mentorat basé sur un projet, avec des exemples adaptés aux données et aux objectifs de votre équipe, et un accent sur l’autonomie pratique et les habitudes reproductibles.',
+        //   t1: 'Python, R et Bash pour les scientifiques',
+        //   t2: 'Concepts de base en bioinformatique',
+        //   t3: 'Technologies de séquençage et bases du NGS',
+        //   t4: 'Fichiers FASTA, FASTQ, BAM, VCF et GTF/GFF',
+        //   t5: 'NCBI, SRA, GEO, GO, BLAST et bases de données publiques',
+        //   t6: 'Linux et Bash pour chercheurs',
+        //   t7: 'Bases du HPC et des grappes de calcul de l’Alliance',
+        //   t8: 'Organisation des données de recherche et reproductibilité',
+        //   t9: 'Documentation et transfert des flux de travail',
+        //   t10: 'Formation pratique basée sur des projets',
+        //   formatsLabel: 'Formats',
+        //   formatsTitle: 'Des façons flexibles de collaborer',
+        //   f1Title: 'Consultation initiale gratuite',
+        //   f1Text: 'Rencontre d’orientation de 30 minutes pour discuter des objectifs du projet, du type de données, de l’échéancier, des défis actuels et des prochaines étapes possibles.',
+        //   f2Title: 'Soutien horaire',
+        //   f2Text: 'Soutien ciblé pour le dépannage, les questions techniques, la révision de code, les besoins à court terme et l’accompagnement bioinformatique pratique.',
+        //   f3Title: 'Forfaits à prix fixe',
+        //   f3Text: 'Soutien structuré pour les projets d’analyse définis, les audits de flux de travail, les consultations en conception d’étude, la documentation ou les séances de formation.',
+        //   f4Title: 'Ateliers personnalisés',
+        //   f4Text: 'Ateliers pratiques adaptés à une équipe, un cours, un groupe de recherche ou un jeu de données précis.',
+        //   f5Title: 'Formation individuelle',
+        //   f5Text: 'Formation personnalisée adaptée au projet, au profil et au niveau de compétence de la personne apprenante.',
+        //   f6Title: 'Soutien mensuel aux laboratoires',
+        //   f6Text: 'Collaboration continue pour les équipes qui ont besoin d’un accompagnement bioinformatique régulier, de dépannage, de formation et d’une continuité des workflows dans leurs projets de recherche.',
+        //   contactLabel: 'Contact',
+        //   contactTitle: 'Discutons de votre projet ou de vos besoins de formation',
+        //   contactText: 'Les services sont fournis de façon indépendante par BIRD et peuvent être adaptés aux besoins, au budget et à l’échéancier de chaque laboratoire. Les logos institutionnels, les renseignements confidentiels et les détails de projets non publiés ne sont pas utilisés sans autorisation préalable.',
+        //   contactCopy: 'Adresse courriel',
+        //   contactForm: 'Remplir le formulaire de contact',
+        //   downloadPamphlet: 'Télécharger le dépliant',
+        //   location: 'Montréal, Québec · Services disponibles en français et en anglais',
+        //   footerRights: 'Tous droits réservés.',
+        //   copied: 'Courriel copié :',
+        //   emailFallback: 'Courriel :'
+        // }
+
+     fr: {
           skip: 'Aller au contenu',
           brandSubtitle: 'Bioinformatique, Recherche & Données',
           menuButton: 'Menu',
@@ -565,33 +664,43 @@
           navTraining: 'Formation',
           navFormats: 'Formats',
           navContact: 'Contact',
+          
           heroEyebrow: 'Bioinformatics, Research & Data · Bioinformatique, Recherche & Données',
-          heroTitle: 'Soutien bioinformatique pour votre équipe de recherche',
-          heroLead: 'Soutien pratique en bioinformatique, analyse de données, organisation des données de recherche, formation et flux de travail reproductibles pour les laboratoires et les équipes en sciences de la vie.',
+          heroTitle: 'Soutien en bioinformatique et en données pour votre équipe de recherche',
+          heroLead: 'Soutien pratique en bioinformatique, analyse de données, organisation des données de recherche, formation et flux de travail reproductibles pour les laboratoires, les équipes de recherche et les projets en sciences de la vie.',
+          heroContactForm: 'Nous contacter pour une consultation gratuite',
           heroCopyEmail: 'Écrivez-nous pour une consultation gratuite',
           heroExplore: 'Explorer les services',
           heroMicrocopy: 'Consultation initiale gratuite de 30 minutes offerte pour les nouveaux projets.',
+          
           heroCardTitle: 'De la conception d’étude à l’analyse reproductible',
-          heroCardText: 'Développement de flux de travail, organisation des données, formation, dépannage, documentation et mentorat scientifique.',
+          heroCardText: 'Consultation en bioinformatique, développement de flux de travail, formation, dépannage, documentation et mentorat scientifique.',
           withBirdLabel: 'Avec BIRD',
+          
           noticeStrong: 'Consultation initiale gratuite de 30 minutes offerte pour les nouveaux projets.',
           noticeText: 'Cette rencontre permet de discuter des objectifs du projet, du type de données, de l’échéancier, des défis actuels et des prochaines étapes possibles. La conception détaillée d’étude, l’analyse de données, le dépannage, la révision de code et le soutien technique sont offerts comme services distincts.',
+          
           aboutLabel: 'À propos de BIRD',
           aboutTitle: 'Soutien pratique pour les équipes de recherche',
-          aboutText: 'BIRD est un service montréalais de consultation en bioinformatique qui accompagne les laboratoires universitaires, les équipes de recherche, les étudiants, les entreprises en biotechnologie et les organisations en sciences de la vie. Nous aidons les chercheurs à rendre l’analyse de données biologiques complexes plus claire, reproductible, bien documentée et plus facilement transférable aux étudiants, stagiaires et collaborateurs.',
-          aboutText2: 'BIRD s’appuie sur une expertise senior en bioinformatique acquise en milieu de recherche académique, incluant l’analyse omique et de données de séquençage, l’organisation des données de recherche, le développement de flux de travail reproductibles, la formation, le mentorat et le soutien aux jeux de données biologiques et génomiques sensibles.',
-          withBirdLabel: 'Avec BIRD',
+          aboutText: 'BIRD est un service montréalais de consultation en bioinformatique qui accompagne les laboratoires universitaires et en sciences de la vie, les scientifiques, les équipes de recherche et les étudiants. Nous aidons les équipes à rendre les analyses de données biologiques, omiques, de séquençage et de recherche plus claires, reproductibles, bien documentées et plus faciles à transférer aux étudiants, stagiaires et collaborateurs.',
+          aboutText2: 'BIRD s’appuie sur une expertise senior en bioinformatique acquise en milieu de recherche académique, incluant l’analyse de données omiques et de séquençage, l’organisation des données de recherche, le développement de flux de travail reproductibles, la formation, le mentorat et le soutien aux jeux de données biologiques et génomiques sensibles.',
+          
           whyLabel: 'Pourquoi BIRD ?',
-          whyTitle: 'Une expertise senior avec une approche humaine',
-          whyIntro: 'BIRD combine l’expertise technique en bioinformatique avec un accompagnement patient, une formation pratique et une documentation claire afin d’aider les équipes à comprendre, reproduire et poursuivre leurs analyses avec confiance.',
+          whyTitle: 'Une expertise senior pour des analyses claires et reproductibles',
+          whyIntro: 'BIRD combine une expertise technique en bioinformatique avec un accompagnement pratique, une formation appliquée et une documentation claire afin d’aider les équipes à comprendre, reproduire et poursuivre leurs analyses avec confiance.',
+          
           why1Title: 'Expérience senior en bioinformatique',
           why1Text: 'Plus de 10 ans d’expérience dans le soutien de projets de recherche académiques multidisciplinaires et de plateformes bioinformatiques.',
+          
           why2Title: 'Flux de travail reproductibles',
           why2Text: 'Accent mis sur une structure de projet claire, des méthodes documentées, des scripts transférables et le transfert des analyses.',
+          
           why3Title: 'Formation qui favorise l’autonomie',
-          why3Text: 'Enseignement pratique et mentorat pour biologistes, étudiants, personnel de recherche et équipes interdisciplinaires.',
+          why3Text: 'Enseignement pratique et mentorat pour les scientifiques, les étudiants, le personnel de recherche et les équipes interdisciplinaires.',
+          
           why4Title: 'Pratiques responsables des données',
           why4Text: 'Soutien pour organiser les métadonnées, les fichiers à accès contrôlé, les données biologiques sensibles et les flux de travail responsables.',
+          
           expertiseTitle: 'Expertises spécialisées :',
           expertiseTag1: 'PhIP-seq',
           expertiseTag2: 'RNA-seq',
@@ -603,25 +712,34 @@
           expertiseTag8: 'HPC/Slurm',
           expertiseTag9: 'Bases de données biologiques',
           expertiseTag10: 'Documentation des flux de travail',
+          
           servicesLabel: 'Services',
           servicesTitle: 'Comment BIRD peut soutenir votre équipe',
-          servicesIntro: 'Soutien pratique pour les équipes de recherche travaillant avec des données biologiques, de la planification à l’analyse, à la documentation et à la formation.',
+          servicesIntro: 'Soutien pratique pour les équipes de recherche travaillant avec des données en sciences de la vie, biologiques, omiques, de séquençage et de recherche, de la planification à l’analyse, à la documentation et à la formation.',
+          
           s1Title: 'Conception d’étude et consultation en bioinformatique',
           s1Text: 'Accompagnement bioinformatique à l’étape de planification, incluant la structure des échantillons et des métadonnées, la stratégie de réplicats, la conception des comparaisons et la stratégie d’analyse.',
+          
           s2Title: 'Analyse omique et de données de séquençage',
           s2Text: 'Soutien de bout en bout pour les projets omiques et de séquençage, incluant le contrôle qualité, l’analyse exploratoire, WGS, WES, RNA-seq, scRNA-seq, ChIP-seq, amplicon-seq, small RNA-seq, methyl-seq, ATAC-seq, PhIP-seq, métagénomique, métabarcodage et analyse du résistome, avec interprétation et préparation de figures, tableaux et rapports clairs.',
+          
           s3Title: 'Pipelines, organisation des données et dépannage',
-          s3Text: 'Développement, optimisation et dépannage de workflows en Python, R et Bash, avec soutien pour les environnements HPC et les gestionnaires de tâches, incluant Slurm/Torque, l’automatisation et la structuration reproductible des projets.',
-          s4Title: 'Formation pour biologistes et équipes de recherche',
-          s4Text: 'Formation pratique en Python, R, Bash, concepts fondamentaux de bioinformatique, bases du séquençage, bases de données biologiques, formats de fichiers, organisation des données de recherche, bases du HPC et des grappes de calcul de l’Alliance, adaptée au profil de la personne apprenante et aux besoins du projet.',
+          s3Text: 'Développement, optimisation et dépannage de flux de travail en Python, R et Bash, avec soutien pour les environnements HPC et les gestionnaires de tâches, incluant Slurm/Torque, l’automatisation et la structuration reproductible des projets.',
+          
+          s4Title: 'Formation pour scientifiques et équipes de recherche',
+          s4Text: 'Formation pratique en Python, R, Bash, concepts fondamentaux de bioinformatique et d’analyse de données, bases du séquençage, bases de données biologiques, formats de fichiers, organisation des données de recherche, HPC et bases des grappes de calcul de l’Alliance, adaptée au profil de la personne apprenante et aux besoins du projet.',
+          
           s5Title: 'Mentorat et accompagnement scientifique',
           s5Text: 'Accompagnement scientifique et technique pour les étudiants, stagiaires et équipes de recherche, incluant la planification de projet, la révision de code, l’interprétation des données, la documentation des flux de travail et le transfert de connaissances.',
+          
           s6Title: 'Gestion des données de recherche',
-          s6Text: 'Soutien à l’organisation des données de recherche, des métadonnées, de la documentation, des fichiers à accès contrôlé et de la structure des projets afin d’améliorer la clarté, la reproductibilité et le transfert des workflows.',
+          s6Text: 'Soutien à l’organisation des données de recherche, des métadonnées, de la documentation, des fichiers à accès contrôlé et de la structure des projets afin d’améliorer la clarté, la reproductibilité et le transfert des flux de travail.',
+          
           trainingLabel: 'Formation',
-          trainingTitle: 'Renforcement des capacités pour les scientique et les équipes de recherche',
+          trainingTitle: 'Renforcement des capacités pour les scientifiques et les équipes de recherche',
           trainingText: 'La formation peut être offerte sous forme de séances individuelles, d’ateliers de groupe ou de mentorat basé sur un projet, avec des exemples adaptés aux données et aux objectifs de votre équipe, et un accent sur l’autonomie pratique et les habitudes reproductibles.',
-          t1: 'Python, R et Bash pour les scientifiques',
+          
+          t1: 'Python, R et Bash pour scientifiques',
           t2: 'Concepts de base en bioinformatique',
           t3: 'Technologies de séquençage et bases du NGS',
           t4: 'Fichiers FASTA, FASTQ, BAM, VCF et GTF/GFF',
@@ -631,31 +749,40 @@
           t8: 'Organisation des données de recherche et reproductibilité',
           t9: 'Documentation et transfert des flux de travail',
           t10: 'Formation pratique basée sur des projets',
+          
           formatsLabel: 'Formats',
           formatsTitle: 'Des façons flexibles de collaborer',
+          
           f1Title: 'Consultation initiale gratuite',
           f1Text: 'Rencontre d’orientation de 30 minutes pour discuter des objectifs du projet, du type de données, de l’échéancier, des défis actuels et des prochaines étapes possibles.',
+          
           f2Title: 'Soutien horaire',
           f2Text: 'Soutien ciblé pour le dépannage, les questions techniques, la révision de code, les besoins à court terme et l’accompagnement bioinformatique pratique.',
+          
           f3Title: 'Forfaits à prix fixe',
           f3Text: 'Soutien structuré pour les projets d’analyse définis, les audits de flux de travail, les consultations en conception d’étude, la documentation ou les séances de formation.',
-          f4Title: 'Ateliers personnalisés',
+          
+          f4Title: 'Ateliers de formation personnalisés',
           f4Text: 'Ateliers pratiques adaptés à une équipe, un cours, un groupe de recherche ou un jeu de données précis.',
+          
           f5Title: 'Formation individuelle',
           f5Text: 'Formation personnalisée adaptée au projet, au profil et au niveau de compétence de la personne apprenante.',
+          
           f6Title: 'Soutien mensuel aux laboratoires',
-          f6Text: 'Collaboration continue pour les équipes qui ont besoin d’un accompagnement bioinformatique régulier, de dépannage, de formation et d’une continuité des workflows dans leurs projets de recherche.',
+          f6Text: 'Collaboration continue pour les équipes qui ont besoin d’un accompagnement bioinformatique régulier, de dépannage, de formation et de continuité des flux de travail dans leurs projets de recherche.',
+          
           contactLabel: 'Contact',
           contactTitle: 'Discutons de votre projet ou de vos besoins de formation',
           contactText: 'Les services sont fournis de façon indépendante par BIRD et peuvent être adaptés aux besoins, au budget et à l’échéancier de chaque laboratoire. Les logos institutionnels, les renseignements confidentiels et les détails de projets non publiés ne sont pas utilisés sans autorisation préalable.',
           contactCopy: 'Adresse courriel',
-          contactForm: 'Remplir le formulaire de contact',
+          contactForm: 'Nous contacter',
           downloadPamphlet: 'Télécharger le dépliant',
           location: 'Montréal, Québec · Services disponibles en français et en anglais',
           footerRights: 'Tous droits réservés.',
           copied: 'Courriel copié :',
           emailFallback: 'Courriel :'
-        }
+          }
+
       };
 
       let currentLang = localStorage.getItem('birdLanguage') || 'en';
