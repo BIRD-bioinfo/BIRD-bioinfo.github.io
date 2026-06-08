@@ -801,3 +801,12 @@ h3 {
     justify-self: end;
   }
 }
+
+/* Space between hero buttons and white hero box */
+.hero .contact-actions {
+  margin-bottom: 2rem;
+}
+
+.hero-copy .hero-card {
+  margin-top: 2rem;
+}
