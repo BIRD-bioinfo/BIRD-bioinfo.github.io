@@ -87,11 +87,12 @@ img {
 }
 
 .brand-logo {
-  width: 52px;
-  height: 52px;
+  width: clamp(220px, 32vw, 420px);
+  height: auto;
   object-fit: contain;
-  border-radius: 14px;
-  background: var(--white);
+  border-radius: 0;
+  background: transparent;
+  display: block;
 }
 
 .brand-text {
