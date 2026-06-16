@@ -116,6 +116,7 @@ img {
   padding: 0;
   list-style: none;
   color: var(--blue);
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
@@ -205,7 +206,7 @@ h3 {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: clamp(54px, 7vw, 86px) 0 clamp(58px, 7vw, 82px);
+  padding: clamp(50px, 7vw, 80px) 0 clamp(58px, 7vw, 82px);
   color: var(--white);
   background: linear-gradient(
     135deg,
@@ -214,6 +215,8 @@ h3 {
     #0C4D4B 100%
   );
 }
+
+
 
 .hero::after {
   content: "";
@@ -270,10 +273,10 @@ h3 {
 }
 
 .hero-brand-panel {
-  width: 110%;
-  max-width: 660px;
+  width: 120%;
+  max-width: 640px;
   justify-self: end;
-  padding: clamp(22px, 3vw, 34px);
+  padding: clamp(15px, 2vw, 20px);
   color: var(--text);
   background: var(--white);
   border: 1px solid rgba(174, 176, 179, 0.34);
@@ -640,6 +643,7 @@ h3 {
   margin: 0;
 }
 
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */
@@ -688,7 +692,7 @@ h3 {
   }
 
   .hero-title-logo {
-    max-height: 250px;
+    max-height: 210px;
   }
 
   .cards-grid {
@@ -706,7 +710,7 @@ h3 {
   }
 
   .brand-logo {
-    height: 90px;
+    height: 50px;
     max-width: 170px;
   }
 
@@ -723,7 +727,16 @@ h3 {
     border: 1px solid rgba(174, 176, 179, 0.38);
     border-radius: 18px;
     box-shadow: var(--shadow);
+    font-size: 1.2rem;
   }
+  
+  
+  .nav-menu a {
+    display: block;
+    width: 100%;
+    padding: 6px 0;
+  }
+
 
   .nav-menu.open {
     display: flex;
@@ -739,7 +752,7 @@ h3 {
   }
 
   .hero {
-    padding: 46px 0 54px;
+    padding: 38px 0 44px;
   }
 
   .hero .container {
@@ -751,12 +764,32 @@ h3 {
   }
 
   .hero-brand-panel {
-    padding: 18px;
-    border-radius: 20px;
+    padding: 12px 14px;
+    border-radius: 16px;
   }
 
   .hero-title-logo {
-    max-height: 210px;
+    max-height: 155px;
+  }
+
+  .hero-summary {
+    margin-top: 8px;
+    padding-top: 8px;
+  }
+
+  .hero-summary h2 {
+    font-size: 1.15rem;
+    line-height: 1.08;
+  }
+
+  .hero-summary .with-bird-label {
+    margin: 4px 0 5px;
+    font-size: 0.78rem;
+  }
+
+  .hero-summary > p:last-child {
+    font-size: 0.88rem;
+    line-height: 1.35;
   }
 
   .cards-grid,
@@ -785,12 +818,20 @@ h3 {
     width: 100%;
   }
 
-  .hero-title-logo {
-    max-height: 175px;
+  .hero-brand-panel {
+    padding: 10px 12px;
   }
 
-  .hero-summary {
-    margin-top: 16px;
-    padding-top: 16px;
+  .hero-title-logo {
+    max-height: 130px;
+  }
+
+  .hero-summary h2 {
+    font-size: 1.05rem;
+  }
+
+  .hero-summary > p:last-child {
+    font-size: 0.84rem;
   }
 }
+
