@@ -986,3 +986,53 @@ h3 {
     transform: translateY(0);
   }
 }
+
+/* =========================================================
+   ROBUST ABOUT DROPDOWN — SAFARI + DEPLOYED SITE
+   ========================================================= */
+
+.site-header,
+.nav,
+.nav-menu,
+.nav-dropdown {
+  overflow: visible;
+}
+
+.nav-dropdown-toggle {
+  -webkit-appearance: none;
+  appearance: none;
+  white-space: nowrap;
+}
+
+.nav-menu > li > a,
+.nav-submenu a {
+  white-space: nowrap;
+}
+
+.nav-submenu {
+  z-index: 9999;
+}
+
+/* Desktop fallback if JavaScript is delayed or blocked. */
+@media (hover: hover) and (pointer: fine) {
+  .nav-dropdown:hover .nav-submenu {
+    display: block;
+  }
+
+  .nav-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+}
+
+/* Give the longer French navigation labels a little more room. */
+html[lang="fr"] .nav-menu {
+  gap: 18px;
+  font-size: 1.12rem;
+}
+
+@media (max-width: 820px) {
+  html[lang="fr"] .nav-menu {
+    gap: 14px;
+    font-size: 1rem;
+  }
+}

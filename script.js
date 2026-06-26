@@ -1,81 +1,93 @@
-const toggle = document.querySelector('.nav-toggle');
-const menu = document.querySelector('#nav-menu');
-if (toggle && menu) {
-  toggle.addEventListener('click', () => {
-    const isOpen = menu.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(isOpen));
-  });
-  menu.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      menu.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
+document.addEventListener('DOMContentLoaded', () => {
+  const mobileToggle = document.querySelector('.nav-toggle');
+  const mobileMenu = document.querySelector('#nav-menu');
+
+  const closeMobileMenu = () => {
+    if (!mobileToggle || !mobileMenu) return;
+    mobileMenu.classList.remove('open');
+    mobileToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  if (mobileToggle && mobileMenu) {
+    mobileToggle.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      mobileToggle.setAttribute('aria-expanded', String(isOpen));
     });
-  });
-}
-const year = document.querySelector('#year');
-if (year) year.textContent = new Date().getFullYear();
-
-
-const aboutDropdown = document.querySelector('.nav-dropdown');
-const aboutDropdownToggle = document.querySelector('.nav-dropdown-toggle');
-
-if (aboutDropdown && aboutDropdownToggle) {
-  aboutDropdownToggle.addEventListener('click', () => {
-    const isOpen =
-      aboutDropdownToggle.getAttribute('aria-expanded') === 'true';
-
-    aboutDropdownToggle.setAttribute(
-      'aria-expanded',
-      String(!isOpen)
-    );
-
-    aboutDropdown.classList.toggle('open', !isOpen);
-  });
-
-  aboutDropdown.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      aboutDropdown.classList.remove('open');
-      aboutDropdownToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-
-  document.addEventListener('click', event => {
-    if (!aboutDropdown.contains(event.target)) {
-      aboutDropdown.classList.remove('open');
-      aboutDropdownToggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-}
-
-document.addEventListener('keydown', (event) => {
-  if (
-    event.key === 'Escape' &&
-    aboutDropdown &&
-    aboutDropdownToggle
-  ) {
-    aboutDropdown.classList.remove('open');
-    aboutDropdownToggle.setAttribute('aria-expanded', 'false');
-    aboutDropdownToggle.focus();
   }
-});
 
-const whoWeAreLink = document.querySelector(
-  'a[data-i18n="navWhoWeAre"]'
-);
-const whoWeAreSection = document.querySelector('#who-we-are');
+  const dropdowns = document.querySelectorAll('.nav-dropdown');
 
-if (whoWeAreLink && whoWeAreSection) {
-  whoWeAreLink.addEventListener('click', (event) => {
-    event.preventDefault();
+  const closeDropdown = (dropdown) => {
+    const button = dropdown.querySelector('.nav-dropdown-toggle');
+    dropdown.classList.remove('open');
+    if (button) button.setAttribute('aria-expanded', 'false');
+  };
 
-    whoWeAreSection.hidden = false;
-    whoWeAreSection.classList.add('is-visible');
+  const closeAllDropdowns = (except = null) => {
+    dropdowns.forEach((dropdown) => {
+      if (dropdown !== except) closeDropdown(dropdown);
+    });
+  };
 
-    requestAnimationFrame(() => {
-      whoWeAreSection.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+  dropdowns.forEach((dropdown) => {
+    const button = dropdown.querySelector('.nav-dropdown-toggle');
+    const submenu = dropdown.querySelector('.nav-submenu');
+
+    if (!button || !submenu) return;
+
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const willOpen = !dropdown.classList.contains('open');
+      closeAllDropdowns(dropdown);
+      dropdown.classList.toggle('open', willOpen);
+      button.setAttribute('aria-expanded', String(willOpen));
+    });
+
+    submenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        closeDropdown(dropdown);
+        closeMobileMenu();
       });
     });
   });
-}
+
+  document.addEventListener('click', (event) => {
+    dropdowns.forEach((dropdown) => {
+      if (!dropdown.contains(event.target)) closeDropdown(dropdown);
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+
+    dropdowns.forEach((dropdown) => {
+      const button = dropdown.querySelector('.nav-dropdown-toggle');
+      if (dropdown.classList.contains('open')) {
+        closeDropdown(dropdown);
+        if (button) button.focus();
+      }
+    });
+
+    closeMobileMenu();
+  });
+
+  const whoWeAreLink = document.querySelector('a[data-i18n="navWhoWeAre"]');
+  const whoWeAreSection = document.querySelector('#who-we-are');
+
+  if (whoWeAreLink && whoWeAreSection) {
+    whoWeAreLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      whoWeAreSection.hidden = false;
+      whoWeAreSection.classList.add('is-visible');
+
+      requestAnimationFrame(() => {
+        whoWeAreSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+  }
+});
