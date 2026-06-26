@@ -206,7 +206,7 @@ h3 {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: clamp(50px, 7vw, 80px) 0 clamp(58px, 7vw, 82px);
+  padding: clamp(40px, 5vw, 60px) 0 clamp(48px, 5vw, 66px);
   color: var(--white);
   background: linear-gradient(
     135deg,
@@ -215,8 +215,6 @@ h3 {
     #0C4D4B 100%
   );
 }
-
-
 
 .hero::after {
   content: "";
@@ -237,23 +235,37 @@ h3 {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.88fr);
-  align-items: center;
-  gap: clamp(40px, 6vw, 84px);
+  grid-template-columns: minmax(0, 1.2fr) minmax(380px, 0.8fr);
+  grid-template-areas:
+    "eyebrow eyebrow"
+    "title title"
+    "lead panel"
+    "actions panel";
+  column-gap: clamp(32px, 4vw, 60px);
+  row-gap: 18px;
 }
 
+/* Place the contents of .hero-copy directly in the hero grid. */
 .hero-copy {
-  min-width: 0;
-  max-width: 760px;
+  display: contents;
+}
+
+.hero-copy .eyebrow {
+  grid-area: eyebrow;
+  margin: 0;
 }
 
 .hero h1 {
-  max-width: 740px;
-  font-size: clamp(2.35rem, 4.7vw, 4.6rem);
+  grid-area: title;
+  width: 100%;
+  max-width: none;
+  margin: 0 0 10px;
+  font-size: clamp(2.35rem, 4.2vw, 4.25rem);
   line-height: 0.98;
 }
 
 .hero-lead {
+  grid-area: lead;
   max-width: 680px;
   margin: 0 0 26px;
   color: rgba(255, 255, 255, 0.9);
@@ -261,27 +273,32 @@ h3 {
 }
 
 .hero-actions {
+  grid-area: actions;
   display: flex;
   flex-wrap: wrap;
+  align-self: start;
   gap: 14px;
 }
 
-.microcopy {
-  margin-top: 16px;
-  color: rgba(255, 255, 255, 0.76);
-  font-size: 0.95rem;
-}
-
 .hero-brand-panel {
-  width: 120%;
-  max-width: 640px;
+  grid-area: panel;
+  width: 100%;
+  max-width: 700px;
   justify-self: end;
+  align-self: end;
+  margin-top: 35px;
   padding: clamp(15px, 2vw, 20px);
   color: var(--text);
   background: var(--white);
   border: 1px solid rgba(174, 176, 179, 0.34);
   border-radius: 24px;
   box-shadow: var(--shadow);
+}
+
+.microcopy {
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.95rem;
 }
 
 .hero-title-logo {
@@ -296,7 +313,6 @@ h3 {
   margin-top: 20px;
   padding-top: 20px;
   border-top: 1px solid rgba(174, 176, 179, 0.38);
-
 }
 
 .hero-summary h2 {
@@ -622,6 +638,85 @@ h3 {
   margin: 4px 0 0;
 }
 
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  color: var(--blue);
+  background: transparent;
+  border: 0;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.nav-dropdown-toggle[aria-expanded="true"] .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.nav-submenu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 0;
+  z-index: 30;
+  display: none;
+  min-width: 190px;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  background: var(--white);
+  border: 1px solid rgba(174, 176, 179, 0.38);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.nav-dropdown.open .nav-submenu {
+  display: block;
+}
+
+.nav-submenu a {
+  display: block;
+  padding: 9px 12px;
+  color: var(--blue);
+  border-radius: 9px;
+  white-space: nowrap;
+}
+
+.nav-submenu a:hover {
+  color: var(--dark-green);
+  background: var(--green-soft);
+}
+
+#about {
+  scroll-margin-top: 35px;
+}
+#who-we-are {
+  scroll-margin-top: -15px;
+}
+
+
+#formats {
+  scroll-margin-top: 35px;
+}
+
+#services {
+  scroll-margin-top: 35px;
+}
+
+#training {
+  scroll-margin-top: 100px;
+}
 /* =========================================================
    FOOTER
    ========================================================= */
@@ -648,14 +743,10 @@ h3 {
    RESPONSIVE
    ========================================================= */
 
-@media (max-width: 1100px) {
-  .hero .container {
-    width: min(100% - 44px, 1120px);
-  }
-
+@media (max-width: 1000px) {
   .hero-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.82fr);
-    gap: 38px;
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 0.82fr);
+    column-gap: 38px;
   }
 
   .hero-brand-panel {
@@ -672,23 +763,28 @@ h3 {
     width: min(100% - 32px, 760px);
   }
 
-  .hero-grid,
+  .hero-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "eyebrow"
+      "title"
+      "lead"
+      "actions"
+      "panel";
+    gap: 20px;
+  }
+
   .split,
   .contact-card {
     grid-template-columns: 1fr;
   }
 
-  .hero-grid {
-    gap: 32px;
-  }
-
-  .hero-copy {
-    max-width: none;
-  }
-
   .hero-brand-panel {
+    width: 100%;
     max-width: 680px;
     justify-self: stretch;
+    align-self: auto;
+    margin-top: 10px;
   }
 
   .hero-title-logo {
@@ -729,14 +825,12 @@ h3 {
     box-shadow: var(--shadow);
     font-size: 1.2rem;
   }
-  
-  
+
   .nav-menu a {
     display: block;
     width: 100%;
     padding: 6px 0;
   }
-
 
   .nav-menu.open {
     display: flex;
@@ -764,6 +858,7 @@ h3 {
   }
 
   .hero-brand-panel {
+    margin-top: 12px;
     padding: 12px 14px;
     border-radius: 16px;
   }
@@ -806,6 +901,22 @@ h3 {
   .container {
     width: min(100% - 28px, 1120px);
   }
+
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav-dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-submenu {
+    position: static;
+    width: 100%;
+    margin-top: 8px;
+    box-shadow: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -835,3 +946,43 @@ h3 {
   }
 }
 
+/* About dropdown interaction */
+.nav-dropdown-toggle:hover,
+.nav-dropdown-toggle:focus-visible {
+  color: var(--green);
+}
+
+.nav-dropdown-toggle:focus-visible,
+.nav-submenu a:focus-visible {
+  outline: 3px solid rgba(0, 191, 95, 0.35);
+  outline-offset: 4px;
+}
+
+.nav-dropdown.open .nav-submenu {
+  display: block;
+}
+
+/* Hidden Who we are section */
+.who-we-are-section[hidden] {
+  display: none;
+}
+
+.who-we-are-section.is-visible {
+  animation: revealWhoWeAre 0.35s ease-out;
+}
+
+.who-we-are-section .wide-text + .wide-text {
+  margin-top: 1rem;
+}
+
+@keyframes revealWhoWeAre {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
