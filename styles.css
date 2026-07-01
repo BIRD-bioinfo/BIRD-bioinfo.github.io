@@ -571,6 +571,9 @@ h3 {
   font-weight: 700;
 }
 
+
+
+
 /* =========================================================
    FORMATS
    ========================================================= */
@@ -593,6 +596,68 @@ h3 {
 .format-grid span {
   color: rgba(255, 255, 255, 0.75);
   font-size: 0.94rem;
+}
+
+
+
+/* =========================================================
+   MEMBERSHIP
+   ========================================================= */
+
+.membership-section {
+  padding: 36px 0;
+  background: var(--white);
+  border-top: 1px solid rgba(174, 176, 179, 0.3);
+}
+
+.membership-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.membership-label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.membership-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.bioquebec-logo {
+  display: block;
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+html[lang="fr"] .bioquebec-logo {
+  width: 260px;
+}
+
+
+@media (max-width: 600px) {
+  .membership-content {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .bioquebec-logo {
+    width: 190px;
+    height: auto;
+  }
+
+  html[lang="fr"] .bioquebec-logo {
+    width: 220px;
+  }
 }
 
 /* =========================================================

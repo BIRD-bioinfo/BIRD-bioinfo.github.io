@@ -369,6 +369,36 @@
         </div>
       </div>
     </section>
+    
+    
+    
+    <section class="membership-section" aria-label="Professional membership">
+  <div class="container membership-content">
+    <p class="membership-label" data-i18n="membershipLabel">
+      BIRD is a member of
+    </p>
+
+    <a
+      href="https://bioquebec.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="membership-link"
+      aria-label="BIRD is a member of BIOQuébec"
+    >
+      <img
+  		  src="assets/BIOQuebec_logo_en.png"
+		  alt="BIOQuébec"
+		  class="bioquebec-logo"
+		  data-bioquebec-logo
+		  data-logo-en="assets/BIOQuebec_logo_en.png"
+		  data-logo-fr="assets/BIOQuebec_logo_fr.png"
+		>
+    </a>
+  </div>
+</section>
+
+
+
   </main>
 
   <footer class="site-footer">
@@ -399,7 +429,7 @@
             aboutText3: 'Support is adapted to each project, from focused technical assistance to complete analysis, training, and ongoing collaboration.',
             brandSubtitle: 'Bioinformatics, Research & Data',
             contactCopy: 'Email address',
-            contactForm: 'Contact us',
+            contactForm: 'Clic here to contact us',
             contactLabel: 'Contact',
             contactText: 'Tell us about your research question, data, timeline, and current challenges. We will recommend a support format adapted to your project, priorities, and available resources.',
             contactConfidentiality: 'Confidential and unpublished project information is handled responsibly and is never used publicly without prior authorization.',
@@ -408,7 +438,7 @@
             downloadPamphlet: 'Download pamphlet',
             emailFallback: 'Email:',
 
-expertiseTag1: 'WGS/WES',
+			expertiseTag1: 'WGS/WES',
             expertiseTag2: 'RNA-seq',
             expertiseTag3: 'scRNA-seq',
             expertiseTag4: 'PhIP-seq',
@@ -450,10 +480,10 @@ expertiseTag1: 'WGS/WES',
             location: 'Montreal, Quebec · Services available in English and French',
             menuButton: 'Menu',
             navAbout: 'About',
-navAboutOverview: 'About BIRD',
-navWhoWeAre: 'Who we are',
+			navAboutOverview: 'About BIRD',
+			navWhoWeAre: 'Who we are',
 
-whoWeAreLabel: 'Who we are',
+			whoWeAreLabel: 'Who we are',
             whoWeAreTitle: 'Two bioinformaticians, one shared vision',
             whoWeAreText: 'BIRD brings together two bioinformaticians with more than 15 years of combined experience in biological research, genomics, programming, data analysis, scientific training, and knowledge transfer.',
             whoWeAreText2: 'Our foundation in biology helps us understand the scientific questions behind each project, while our computational experience allows us to work across diverse genomic and next-generation sequencing technologies, data types, and research environments.',
@@ -480,7 +510,7 @@ whoWeAreLabel: 'Who we are',
             servicesTitle: 'How BIRD can support your team',
             skip: 'Skip to content',
 
-t1: 'Python and R programming for scientists',
+			t1: 'Python and R programming for scientists',
             t2: 'Fundamental bioinformatics concepts',
             t3: 'Sequencing technologies and NGS fundamentals',
             t4: 'Biological data formats: FASTA, FASTQ, BAM, VCF, and GTF/GFF',
@@ -507,6 +537,8 @@ t1: 'Python and R programming for scientists',
             whyTitle: 'Biological insight, computational expertise, and knowledge transfer',
             withBirdLabel: 'With BIRD',
             
+            membershipLabel: 'BIRD is a member of',
+            
 
         },
 
@@ -528,7 +560,7 @@ whoWeAreLabel: 'Qui sommes-nous',
           aboutText3: 'Notre soutien est adapté à chaque projet, qu’il s’agisse d’une assistance technique ciblée, d’une analyse complète, de formation ou d’une collaboration continue.',
           brandSubtitle: 'Bioinformatique, Recherche & Données',
           contactCopy: 'Adresse courriel',
-          contactForm: 'Nous joindre',
+          contactForm: 'Cliquez pour nous joindre',
           contactLabel: 'Contact',
           contactText: 'Présentez-nous votre question de recherche, vos données, votre échéancier et vos défis actuels. Nous vous proposerons une formule de soutien adaptée à votre projet, à vos priorités et à vos ressources.',
           contactConfidentiality: 'Les renseignements confidentiels et les détails de projets non publiés sont traités de façon responsable et ne sont jamais utilisés publiquement sans autorisation préalable.',
@@ -602,7 +634,7 @@ whoWeAreLabel: 'Qui sommes-nous',
           servicesTitle: 'Comment BIRD peut soutenir votre équipe',
           skip: 'Aller au contenu',
 
-t1: 'Programmation en Python et R pour les scientifiques',
+		  t1: 'Programmation en Python et R pour les scientifiques',
           t2: 'Concepts fondamentaux de la bioinformatique',
           t3: 'Technologies de séquençage et notions fondamentales du NGS',
           t4: 'Formats de données biologiques : FASTA, FASTQ, BAM, VCF et GTF/GFF',
@@ -630,6 +662,8 @@ t1: 'Programmation en Python et R pour les scientifiques',
           whyTitle: 'Compréhension biologique, expertise informatique et transfert de connaissances',
           // whyTitle: 'Une expertise senior pour des analyses claires et reproductibles',
           withBirdLabel: 'Avec BIRD',
+          membershipLabel: 'BIRD est membre de',
+
           }
 
       };
@@ -680,6 +714,23 @@ t1: 'Programmation en Python et R pour les scientifiques',
             link.setAttribute('href', href);
           }
         });
+        
+        
+        document.querySelectorAll('[data-bioquebec-logo]').forEach(function (image) {
+  			const logoSource = lang === 'fr' ? image.getAttribute('data-logo-fr')		    
+  											 : image.getAttribute('data-logo-en');
+		
+		    if (logoSource) {
+		  		image.setAttribute('src', logoSource);
+			}
+
+		    image.setAttribute(
+			    'alt',
+			    lang === 'fr' ? 'Logo de BIOQuébec' : 'BIOQuébec logo'
+  			);
+		});
+
+
       };
 
       const showCopyStatus = function (copied, email) {
