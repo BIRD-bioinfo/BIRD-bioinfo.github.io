@@ -352,7 +352,7 @@
           <p class="contact-confidentiality" data-i18n="contactConfidentiality">Confidential and unpublished project information is handled responsibly and is never used publicly without prior authorization.</p>
         </div>
         <div class="contact-actions">
-        <!--  <button class="btn btn-primary copy-email-btn" type="button" data-copy-email="bird.bioinfo@gmail.com" data-i18n="contactCopy">Email address</button> -->
+        <!--  <button class="btn btn-primary copy-email-btn" type="button" data-copy-email="contact@bird-bioinfo.ca" data-i18n="contactCopy">Email address</button> -->
         <a
           class="btn btn-primary"
           href="https://docs.google.com/forms/d/e/1FAIpQLSfuAXVFjFJv3H0WsZqo8uDZnhdxnNh46y_9QAaL5hTwHJIWtw/viewform?usp=dialog"
@@ -364,7 +364,7 @@
         </a>
           
          <!--    <a class="btn btn-secondary" href="assets/BIRD_pamphlet_en.pdf" data-i18n="downloadPamphlet" data-pamphlet-download data-pamphlet-en="assets/BIRD_pamphlet_en.pdf" data-pamphlet-fr="assets/BIRD_pamphlet_fr.pdf">Download pamphlet</a> -->
-          <p class="location">bird.bioinfo@gmail.com</p>
+          <p class="location">contact@bird-bioinfo.ca</p>
           <p class="location" data-i18n="location">Montréal, Québec · Services available in English and French</p>
           <p class="microcopy" data-copy-status hidden></p>
         </div>
@@ -756,7 +756,7 @@ whoWeAreLabel: 'Qui sommes-nous',
 
         document.querySelectorAll('[data-copy-email]').forEach(function (button) {
           button.addEventListener('click', async function () {
-            const email = button.getAttribute('data-copy-email') || 'bird.bioinfo@gmail.com';
+            const email = button.getAttribute('data-copy-email') || 'contact@bird-bioinfo.ca';
             let copied = false;
 
             if (navigator.clipboard && window.isSecureContext) {
