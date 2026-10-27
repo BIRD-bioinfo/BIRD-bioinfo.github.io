@@ -10,7 +10,7 @@
   <meta property="og:description" content="Bioinformatics support, omics and sequencing analysis, research data management, training, mentorship, and reproducible research workflows.">
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/BIRD_L7_H.png" type="image/png">
-  <link rel="stylesheet" href="./styles.css?v=20260626-2">
+  <link rel="stylesheet" href="./styles.css?v=20261027-5">
   <script src="./script.js?v=20260626-2" defer></script>
   
 </head>
@@ -400,6 +400,35 @@
 
 
 
+    <!-- Infrastructure acknowledgement: distinct from professional membership and sponsorship. -->
+    <section id="research-infrastructure" class="infrastructure-section" aria-labelledby="infrastructure-heading">
+      <div class="container infrastructure-content">
+        <p class="infrastructure-kicker" data-i18n="infrastructureLabel">Infrastructure acknowledgement</p>
+        <h2 id="infrastructure-heading" data-i18n="infrastructureTitle">Research computing resources</h2>
+        <p class="infrastructure-description" data-i18n="infrastructureText">
+          BIRD uses advanced research computing resources made available through Calcul Québec and the Digital Research Alliance of Canada in its scientific and technical activities.
+        </p>
+        <div class="infrastructure-providers" aria-label="Research computing resource providers">
+          <a class="infrastructure-provider infrastructure-provider-cq" href="https://www.calculquebec.ca/"
+             target="_blank" rel="noopener noreferrer" aria-label="Visit Calcul Québec">
+            <img class="infrastructure-logo infrastructure-logo-cq" src="assets/CalculQuebec_logo.jpg"
+                 alt="Calcul Québec" loading="lazy" decoding="async">
+          </a>
+          <a class="infrastructure-provider infrastructure-provider-alliance" href="https://alliancecan.ca/en"
+             target="_blank" rel="noopener noreferrer" aria-label="Visit the Digital Research Alliance of Canada">
+            <img class="infrastructure-logo infrastructure-logo-alliance" src="assets/Alliance_logo_web.png"
+                 alt="Digital Research Alliance of Canada / Alliance de recherche numérique du Canada"
+                 loading="lazy" decoding="async">
+          </a>
+        </div>
+        <p class="infrastructure-disclaimer" data-i18n="infrastructureNote">
+          This acknowledges use of computing resources and does not imply an institutional partnership or endorsement.
+        </p>
+      </div>
+    </section>
+
+
+
   </main>
 
   <footer class="site-footer">
@@ -538,6 +567,11 @@
             whyTitle: 'Biological insight, computational expertise, and knowledge transfer',
             withBirdLabel: 'With BIRD',
             
+            infrastructureLabel: 'Infrastructure acknowledgement',
+            infrastructureTitle: 'Research computing resources',
+            infrastructureText: 'BIRD uses advanced research computing resources made available through Calcul Québec and the Digital Research Alliance of Canada in its scientific and technical activities.',
+            infrastructureAllianceName: 'Digital Research Alliance of Canada',
+            infrastructureNote: 'This acknowledges use of computing resources and does not imply an institutional partnership or endorsement.',
             membershipLabel: 'BIRD is a member of',
             
 
@@ -663,6 +697,11 @@ whoWeAreLabel: 'Qui sommes-nous',
           whyTitle: 'Compréhension biologique, expertise informatique et transfert de connaissances',
           // whyTitle: 'Une expertise senior pour des analyses claires et reproductibles',
           withBirdLabel: 'Avec BIRD',
+          infrastructureLabel: 'Remerciements pour les ressources informatiques',
+          infrastructureTitle: 'Ressources de calcul pour la recherche',
+          infrastructureText: 'BIRD utilise des ressources de calcul informatique de pointe mises à disposition par Calcul Québec et l’Alliance de recherche numérique du Canada dans le cadre de ses activités scientifiques et techniques.',
+          infrastructureAllianceName: 'Alliance de recherche numérique du Canada',
+          infrastructureNote: 'Cette mention reconnaît l’utilisation des ressources informatiques et n’implique aucun partenariat institutionnel ni soutien officiel.',
           membershipLabel: 'BIRD est membre de',
 
           }
@@ -783,5 +822,6 @@ whoWeAreLabel: 'Qui sommes-nous',
       });
     })();
   </script>
+
 </body>
 </html>
